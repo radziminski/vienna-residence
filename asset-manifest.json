@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/vienna-residence/static/css/main.92d685bd.chunk.css",
+    "main.js": "/vienna-residence/static/js/main.d4ed4b32.chunk.js",
+    "main.js.map": "/vienna-residence/static/js/main.d4ed4b32.chunk.js.map",
+    "runtime-main.js": "/vienna-residence/static/js/runtime-main.46bfae75.js",
+    "runtime-main.js.map": "/vienna-residence/static/js/runtime-main.46bfae75.js.map",
+    "static/js/2.bcbe5e5a.chunk.js": "/vienna-residence/static/js/2.bcbe5e5a.chunk.js",
+    "static/js/2.bcbe5e5a.chunk.js.map": "/vienna-residence/static/js/2.bcbe5e5a.chunk.js.map",
+    "index.html": "/vienna-residence/index.html",
+    "precache-manifest.ad65ceb4e0a3b3e2cdb451620ca447fa.js": "/vienna-residence/precache-manifest.ad65ceb4e0a3b3e2cdb451620ca447fa.js",
+    "service-worker.js": "/vienna-residence/service-worker.js",
+    "static/css/main.92d685bd.chunk.css.map": "/vienna-residence/static/css/main.92d685bd.chunk.css.map",
+    "static/js/2.bcbe5e5a.chunk.js.LICENSE.txt": "/vienna-residence/static/js/2.bcbe5e5a.chunk.js.LICENSE.txt",
+    "static/media/business.jpg": "/vienna-residence/static/media/business.0a48cac5.jpg",
+    "static/media/header-bg.jpg": "/vienna-residence/static/media/header-bg.b0bf0f7f.jpg",
+    "static/media/restaurant.jpg": "/vienna-residence/static/media/restaurant.ce4a44cc.jpg",
+    "static/media/room-queen-exc.jpg": "/vienna-residence/static/media/room-queen-exc.1e360e39.jpg",
+    "static/media/room-queen.jpg": "/vienna-residence/static/media/room-queen.fb4cdd2e.jpg",
+    "static/media/room-single.jpg": "/vienna-residence/static/media/room-single.893714e9.jpg",
+    "static/media/room-two-bed.jpg": "/vienna-residence/static/media/room-two-bed.e14a23fa.jpg",
+    "static/media/spa.jpg": "/vienna-residence/static/media/spa.91e09dd1.jpg",
+    "static/media/sport.jpg": "/vienna-residence/static/media/sport.3aad5111.jpg",
+    "static/media/main.scss": "/vienna-residence/static/media/transport-bg.356e96b9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.46bfae75.js",
+    "static/js/2.bcbe5e5a.chunk.js",
+    "static/css/main.92d685bd.chunk.css",
+    "static/js/main.d4ed4b32.chunk.js"
+  ]
+}
