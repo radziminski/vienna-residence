@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Toolbar from './components/Toolbar/Toolbar';
+import FooterSmall from './components/Footer/FooterSmall';
+import Home from './components/Pages/Home';
+import Reservations from './components/Pages/Reservations';
+import NotFound from './components/Pages/NotFound';
+
+
+import './sass/main.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+			<Toolbar />
+				<Switch>
+					<Route path="/" exact component={Home} />
+					<Route path="/home" component={Home} />
+					<Route path="/reservations" component={Reservations} />
+					<Route component={NotFound} />
+				</Switch>
+			</Router>
+			<FooterSmall />
+    	</div>
+  	);
 }
 
 export default App;

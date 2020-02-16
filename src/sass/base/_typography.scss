@@ -1,0 +1,55 @@
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: $color-grey-dark; 
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    color: $color-grey;
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 4rem;
+
+    &:after {
+        content: "";
+        display: block;
+        width: 30rem;
+        height: 2px;
+        background-image: linear-gradient(to right, transparent 0, transparent 10%, $color-primary 30%, $color-primary 70%, transparent 90%);
+        position: absolute;
+        top: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--light {
+        color: $color-white;
+
+        &:after {
+            background-image: linear-gradient(to right, transparent 0, transparent 10%, $color-white 30%, $color-white 70%, transparent 90%);
+        }
+    }
+
+}
+
+.icon-title {
+    font-size: 4rem;
+    display: block;
+}
+
+.column-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.paragraph {
+    font-size: 2rem;
+    color: inherit;
+}

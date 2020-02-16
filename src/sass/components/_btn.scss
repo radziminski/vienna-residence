@@ -1,0 +1,12 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        background-image: $gradient-main;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        color: $color-white;
+        border-radius: 5rem;
+        text-shadow: $text-shadow-main;
+    }
+}
