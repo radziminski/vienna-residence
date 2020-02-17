@@ -7,6 +7,7 @@
 
 # old img
 /src/img/img-old
+/src/sass/img/img-old
 
 # testing
 /coverage

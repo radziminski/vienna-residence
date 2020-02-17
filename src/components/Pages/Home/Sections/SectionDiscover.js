@@ -18,7 +18,7 @@ const SectionDiscover = () => {
         {
             title: 'Restaurant',
             img: restaurantImg,
-            link: '/home',
+            link: '/restaurant',
         },
         {
             title: 'Sport',
@@ -28,7 +28,7 @@ const SectionDiscover = () => {
         {
             title: 'Busisness',
             img: businessImg,
-            link: '/home',
+            link: '/business',
         },
     ]
 
