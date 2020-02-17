@@ -30,7 +30,7 @@ export default class Toolbar extends Component {
     render() {
         return (
             <div className={this.state.sticked ? "toolbar toolbar--sticked" : "toolbar"}>
-                <Link style={{color: colors.white, textDecoration: 'none'}} to="/home"><LogoInline parrentClassName={'toolbar__'}/></Link>
+                <Link style={{color: colors.white, textDecoration: 'none'}} to={process.env.PUBLIC_URL + "/home"}><LogoInline parrentClassName={'toolbar__'}/></Link>
                 <Navigation parrentClassName={'toolbar__'}/>
             </div>
         )
