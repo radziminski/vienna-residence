@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# old img
+/src/img/img-old
+
 # testing
 /coverage
 

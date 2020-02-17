@@ -16,10 +16,10 @@ function App() {
 			<Router>
 			<Toolbar />
 				<Switch>
-					<Route path="/" exact component={Home} />
-					<Route path="/home" component={Home} />
-					<Route path="/reservations" component={Reservations} />
-					<Route component={NotFound} />
+					<Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
+					<Route path={process.env.PUBLIC_URL + "/home"} component={Home} />
+					<Route path={process.env.PUBLIC_URL + "/reservations"} component={Reservations} />
+					<Route path={process.env.PUBLIC_URL} component={NotFound} />
 				</Switch>
 			</Router>
 			<FooterSmall />

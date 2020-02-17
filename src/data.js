@@ -27,7 +27,7 @@ export const viennaResRooms = [
     {
         img: QueenRoomImg,
         title: "Standard Queen Room",
-        subTitle: "Standard experiance - 20m^2",
+        subTitle: "Standard experiance - 20m<span className=\"u-upper-text\">2</span>",
         price: "399",
         hotel: "Vienna Res. ****",
         bed: "Double Bed",

@@ -21,7 +21,7 @@ const RoomCard = (props) => {
                 <h3 className="room-card__sub-title">{props.subTitle}</h3>
                 <p className="room-card__desc">{props.desc}</p>
             </div>         
-            <a href="#" className="room-card__btn">Reserve now &rarr;</a>
+            <a href="/" className="room-card__btn">Reserve now &rarr;</a>
         </div>
     )
 }
