@@ -10,7 +10,6 @@
 html {
     // This defines what 1rem is (currently 10px)
     font-size: 62.5%;
-    scroll-behavior: smooth;
 
     @include respond(small-deskt) {
         font-size: 59%;

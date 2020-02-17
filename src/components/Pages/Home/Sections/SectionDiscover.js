@@ -1,12 +1,12 @@
 import React from 'react';
-import BoxLinks from '../BoxLinks/BoxLinks';
-import Linker from './Linker';
-import { colors } from '../../data';
+import BoxLinks from '../../../BoxLinks/BoxLinks';
+import Linker from '../../../Layout/Linker';
+import { colors } from '../../../../data';
 
-import spaImg from '../../img/spa.jpg';
-import restaurantImg from '../../img/restaurant.jpg';
-import sportImg from '../../img/sport.jpg';
-import businessImg from '../../img/business.jpg';
+import spaImg from '../../../../img/spa.jpg';
+import restaurantImg from '../../../../img/restaurant.jpg';
+import sportImg from '../../../../img/sport.jpg';
+import businessImg from '../../../../img/business.jpg';
 
 const SectionDiscover = () => {
     const links = [
@@ -32,6 +32,7 @@ const SectionDiscover = () => {
         <section className="section-discover section--white">
             <Linker color={colors.primaryDark} />
             <h1 className="section-title">Discover Our Hotel</h1>
+            <h2 className="section-subtitle">Our hotel consist of many asdasdsadsadasd asdasd</h2>
             <BoxLinks links={links}/>
         </section>
     )

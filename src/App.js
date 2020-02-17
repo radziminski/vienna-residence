@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
-import Toolbar from './components/Toolbar/Toolbar';
+import Toolbar from './components/Layout/Toolbar/Toolbar';
 import FooterSmall from './components/Footer/FooterSmall';
-import Home from './components/Pages/Home';
+import Home from './components/Pages/Home/Home';
 import Reservations from './components/Pages/Reservations';
 import NotFound from './components/Pages/NotFound';
 

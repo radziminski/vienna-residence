@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoIosAirplane, IoIosCar, IoIosTrain } from 'react-icons/io';
-import Linker from './Linker';
-import { colors } from '../../data';
+import Linker from '../../../Layout/Linker';
+import { colors } from '../../../../data';
 
 const SectionTransport = () => {
     return (

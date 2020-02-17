@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ItemsCarousel from 'react-items-carousel';
-import RoomCard from '../RoomCard/RoomCard';
+import RoomCard from '../../../RoomCard/RoomCard';
 
-import { viennaResRooms, colors } from '../../data';
-import Linker from './Linker';
+import { viennaResRooms, colors } from '../../../../data';
+import Linker from '../../../Layout/Linker';
 
 class SectionRooms extends Component {
     state = {
