@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Navigation } from './Navigation';
-import { GiMountaintop } from 'react-icons/gi';
+import LogoInline from '../Logo/LogoInline';
 
 export default class Toolbar extends Component {
     
@@ -28,8 +28,8 @@ export default class Toolbar extends Component {
     render() {
         return (
             <div className={this.state.sticked ? "toolbar toolbar--sticked" : "toolbar"}>
-                <h1 className="toolbar__logo">Vienna <GiMountaintop className="toolbar__logo-icon"/> Residence</h1>
-                <Navigation parrentClassName={'toolbar'}/>
+                <LogoInline parrentClassName={'toolbar__'}/>
+                <Navigation parrentClassName={'toolbar__'}/>
             </div>
         )
     }

@@ -5,6 +5,9 @@ import SectionNumbers from './Sections/SectionNumbers';
 import SectionRooms from './Sections/SectionRooms';
 import SectionTransport from './Sections/SectionTransport';
 import SectionDiscover from './Sections/SectionDiscover';
+import SectionReservations from './Sections/SectionReservations';
+import SectionContact from './Sections/SectionContact';
+import SectionAwards from './Sections/SectionAwards';
 
 const Home = () => {
     return (
@@ -15,8 +18,11 @@ const Home = () => {
 			<SectionRooms />
 			<SectionDiscover />
 			<SectionTransport />
+            <SectionReservations />
+            <SectionAwards />
+            <SectionContact />
         </Fragment>
     )
 }
 
-export default Home
+export default Home;

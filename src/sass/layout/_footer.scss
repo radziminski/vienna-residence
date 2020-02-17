@@ -7,3 +7,21 @@
     font-size: 1.8rem;
     font-weight: 300;
 }
+
+.footer-big {
+    background-color: $color-primary-dark;
+    color: $color-white;
+    padding: 2rem 0 4rem 0;
+    font-size: 1.4rem;
+
+    &__logo {
+        font-size: inherit;
+        letter-spacing: 0.5px;
+    }
+
+    &__logo-icon {
+        font-size: 2.4rem;
+        margin-bottom: -0.3rem;
+    }
+
+}

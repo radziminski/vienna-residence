@@ -50,6 +50,7 @@ export const viennaResRooms = [
 export const colors = {
     primary: '#2D787C',
     primaryLight: '#548BB0',
-    primaryDark: 'rgb(42, 93, 109)',
+    primaryDark: 'rgb(36, 80, 94)',
+    primaryDarkSuper: 'rgb(26, 57, 66)',
     white: '#fff',
 }
