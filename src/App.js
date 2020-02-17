@@ -1,29 +1,23 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router} from 'react-router-dom'
 
+import Pages from './components/Pages/Pages';
 import Toolbar from './components/Layout/Toolbar/Toolbar';
-import FooterSmall from './components/Layout/Footer/FooterSmall';
-import Home from './components/Pages/Home/Home';
-import Reservations from './components/Pages/Reservations';
-import NotFound from './components/Pages/NotFound';
-import FooterBig from './components/Layout/Footer/FooterBig';
+import ScrollToTop from './components/Pages/ScrollToTop';
 
 import './sass/main.scss';
+import { animateScroll } from 'react-scroll';
 
 function App() {
 	return (
 		<div className="App">
-			<Router>
-				<Toolbar />
-				<Switch>
-					<Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
-					<Route path={process.env.PUBLIC_URL + "/home"} component={Home} />
-					<Route path={process.env.PUBLIC_URL + "/reservations"} component={Reservations} />
-					<Route path={process.env.PUBLIC_URL} component={NotFound} />
-				</Switch>
-				<FooterBig />
+			<Router onUpdate={() => animateScroll.scrollToTop()}>
+				<ScrollToTop>
+					<Toolbar />
+					<Pages />
+				</ScrollToTop>
 			</Router>
-			<FooterSmall />
+			
     	</div>
   	);
 }

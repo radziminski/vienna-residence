@@ -1,17 +1,17 @@
-import React from 'react'
-import BoxLink from './BoxLink'
+import React from 'react';
+import BoxLink from './BoxLink';
+import { Link } from 'react-router-dom';
+import { colors } from '../../data';
 
 const BoxLinks = (props) => {
     const linkWidth = String(100 / props.links.length) + '%';
     const links = props.links.map(element => {
-        return <BoxLink 
+        return <Link style={{color: colors.white, textDecoration: 'none'}} to={process.env.PUBLIC_URL + element.link} key={element.title}><BoxLink 
                     title={element.title}
                     img={element.img}
                     //onClickHandler={element.link}
-                    onClickHandler={() => console.log("clicked")}
                     width={linkWidth}
-                    key={element.title}
-                />
+                /></Link>
     })
 
     return (

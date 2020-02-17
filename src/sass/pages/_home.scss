@@ -30,9 +30,17 @@
 
 .section-numbers {
     background-image: $gradient-main;
-    padding: 1rem 25rem;
-    display: flex;
-    justify-content: space-between;
+    padding: 1rem 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 140rem;
+        margin: 0 auto;
+    }
+    
 }
 
 .section-about {
@@ -40,8 +48,8 @@
 }
 
 .section-rooms {
-    padding-left: 28rem;
-    padding-right: 28rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .section-transport {
@@ -81,9 +89,15 @@
 
 .section-awards {
     background-image: $gradient-main;
-    padding: 1rem 25rem;
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
+
     color: $color-white;
     padding: 2rem 12rem;
+    overflow: hidden;
+
+    &__award {
+        
+        font-size: 2rem;
+        text-align: center;
+    }
 }

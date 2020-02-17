@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Navigation } from './Navigation';
 import LogoInline from '../Logo/LogoInline';
+import { Link } from 'react-router-dom';
+import { colors } from '../../../data';
 
 export default class Toolbar extends Component {
     
@@ -28,7 +30,7 @@ export default class Toolbar extends Component {
     render() {
         return (
             <div className={this.state.sticked ? "toolbar toolbar--sticked" : "toolbar"}>
-                <LogoInline parrentClassName={'toolbar__'}/>
+                <Link style={{color: colors.white, textDecoration: 'none'}} to="/home"><LogoInline parrentClassName={'toolbar__'}/></Link>
                 <Navigation parrentClassName={'toolbar__'}/>
             </div>
         )

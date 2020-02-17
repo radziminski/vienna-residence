@@ -1,0 +1,13 @@
+.reservations-header {
+    height: 100vh;
+    background-color: rgba($color-primary-light, 0.2);
+    position: relative;
+
+    &__content-wrapper {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+}

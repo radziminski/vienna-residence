@@ -39,7 +39,10 @@ class SectionRooms extends Component {
             <section className="section-rooms section--blue">
                 <Linker color={colors.white} />
                 <h1 className="section-title section-title--light">Our Apartements</h1>
+                <div className="items-carousel__wrapper">
+
                     <ItemsCarousel
+                        className="items-carousel"
                         infiniteLoop
                         placeholderItem={placeholderElement}
                         enablePlaceholder={true}
@@ -57,6 +60,8 @@ class SectionRooms extends Component {
                         leftChevron={leftChevron}
                         children={rooms}
                     />
+                    
+                </div>
             </section>
         )
     } 

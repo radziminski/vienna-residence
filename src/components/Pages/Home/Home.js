@@ -1,5 +1,5 @@
-import React, { Fragment } from 'react'
-import Header from '../../Header/Header';
+import React from 'react';
+import Header from './Header/Header';
 import SectionAbout from './Sections/SectionAbout';
 import SectionNumbers from './Sections/SectionNumbers';
 import SectionRooms from './Sections/SectionRooms';
@@ -11,7 +11,7 @@ import SectionAwards from './Sections/SectionAwards';
 
 const Home = () => {
     return (
-        <Fragment>
+        <main>
             <Header />
 			<SectionNumbers />
 			<SectionAbout />
@@ -21,7 +21,7 @@ const Home = () => {
             <SectionReservations />
             <SectionAwards />
             <SectionContact />
-        </Fragment>
+        </main>
     )
 }
 

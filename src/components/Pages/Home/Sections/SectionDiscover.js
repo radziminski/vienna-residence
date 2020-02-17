@@ -13,18 +13,22 @@ const SectionDiscover = () => {
         {
             title: 'SPA',
             img: spaImg,
+            link: '/spa',
         },
         {
             title: 'Restaurant',
             img: restaurantImg,
+            link: '/home',
         },
         {
             title: 'Sport',
             img: sportImg,
+            link: '/sport',
         },
         {
             title: 'Busisness',
             img: businessImg,
+            link: '/home',
         },
     ]
 

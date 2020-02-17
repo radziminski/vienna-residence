@@ -14,6 +14,7 @@
 @import "./components/box-links";
 @import "./components/reservations";
 @import "./components/calendar";
+@import "./components/arrows";
 
 @import "./layout/header";
 @import "./layout/grid";
@@ -21,6 +22,10 @@
 @import "./layout/linker";
 @import "./layout/footer";
 @import "./layout/not-found";
+@import "./layout/router-transitions";
+@import "./layout/discover-header";
 
 @import "./pages/home";
+@import "./pages/spa";
+@import "./pages/reservations";
 

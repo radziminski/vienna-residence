@@ -11,6 +11,10 @@ class SectionNumbers extends Component {
         window.addEventListener('scroll', this.onScrollHandler);
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.onScrollHandler);
+    }
+
     onScrollHandler = () => {
         const scrollOffset = window.scrollY;
         if (scrollOffset > (this.state.elementRef.current.offsetTop - window.innerHeight)) this.setState({countUpStart: 0});
@@ -19,6 +23,7 @@ class SectionNumbers extends Component {
     render() {
         return (
             <section ref={this.state.elementRef} className="section-numbers">
+            <div className="section-numbers__wrapper">
                 <div className="count-up">
                     <div className="count-up__title">Years of work:</div>
                     <CountUp
@@ -56,6 +61,7 @@ class SectionNumbers extends Component {
                         duration={3.8}
                         start={this.state.countUpStart}
                     />
+                </div>
                 </div>
             </section>
         )

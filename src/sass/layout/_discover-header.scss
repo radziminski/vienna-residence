@@ -1,0 +1,47 @@
+.discover-header {
+    height: 80vh;
+    width: 100%;
+    background-color: $color-white;
+    
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    
+    &__hero-wrapper {
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__hero-big {
+        padding: 1.5rem 3rem;
+        color: $color-white;
+        font-size: 4rem;
+        font-weight: 500;
+        background-image: $gradient-main;
+        text-shadow: $text-shadow-main;
+        display: inline-block;
+        box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+    }
+    &__hero-small {
+        padding: 1rem 2rem;
+        color: $color-white;
+        font-size: 3rem;
+        font-weight: 500;
+        background-image: $gradient-main-reversed;
+        text-shadow: $text-shadow-main;
+        display: inline-block;
+        box-shadow: 0 1rem 1.5rem rgba($color-black, 0.3);
+        transform: translateY(-0.5rem);
+    }
+
+    &--spa {
+        background-image: url(../img/spa-bg.jpg);
+    }
+    &--sport {
+        background-image: url(../img/sport-bg.jpg);
+        background-position: top;
+    }
+}
