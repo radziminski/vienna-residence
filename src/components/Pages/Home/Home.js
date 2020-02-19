@@ -8,6 +8,7 @@ import SectionDiscover from './Sections/SectionDiscover';
 import SectionReservations from './Sections/SectionReservations';
 import SectionContact from './Sections/SectionContact';
 import SectionAwards from './Sections/SectionAwards';
+import { colors } from '../../../data';
 
 const Home = () => {
     return (
@@ -18,7 +19,7 @@ const Home = () => {
 			<SectionRooms />
 			<SectionDiscover />
 			<SectionTransport />
-            <SectionReservations />
+            <SectionReservations linkerColor={colors.primaryDarkSuper}/>
             <SectionAwards />
             <SectionContact />
         </main>

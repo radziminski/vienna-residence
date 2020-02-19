@@ -55,8 +55,8 @@
         }
     }
 
-    @if ($breakpoint) == small-deskt {  // 1440 px
-        @media (max-width: 90em) {
+    @if ($breakpoint) == small-deskt {  // ~1580 px
+        @media (max-width: 100em) {
             @content;
         }
     }

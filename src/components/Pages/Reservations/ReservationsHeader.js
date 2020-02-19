@@ -16,6 +16,14 @@ export default class ReservationsHeader extends Component {
                 <div className="reservations-header__content-wrapper">
                     <ReservationsStart />
                 </div>
+
+                <ScrollLink
+                    to="section-about"
+                    smooth
+                    offset={-200}
+                    duration={400}>
+                        <MdArrowDownward className="arrow-down arrow-down--white"/>
+                </ScrollLink>
             </header>
         )
     }

@@ -43,6 +43,26 @@ body {
     color: $color-grey;
     font-weight: 500;
     margin-bottom: 4rem;
+    margin-top: -2rem;
+    letter-spacing: 0.5px;
+    
+    
+    &--light {
+        color: $color-primary-light-super;
+        //text-shadow: $text-shadow-main;
+    }
+}
+
+.section-desc {
+    font-size: 1.4rem;
+    color: $color-primary-light-super;
+    text-align: center;
+    font-weight: 300;
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    margin-top: -2rem;
 }
 
 .icon-title {

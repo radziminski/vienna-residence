@@ -1,8 +1,8 @@
 import React from 'react';
-import ItemsCarousel from 'react-items-carousel';
+//import ItemsCarousel from 'react-items-carousel';
 
 const SectionAwards = () => {
-    const placeholderElement = (<div style={{ height: 20, background: '#EEE' }} />);
+    //const placeholderElement = (<div style={{ height: 20, background: '#EEE' }} />);
     return (
         <div className="section-awards">
             {/* <ItemsCarousel

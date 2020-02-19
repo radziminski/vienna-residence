@@ -13,12 +13,12 @@ export default class Header extends Component {
     render() {
         return (
             <header className="header">
+                <div className="header__bg-box"><img src={HeaderBg} className="header__bg" alt="header background" /></div>
                 <div className="header__text-box">
                     <h1 className="header__hero-big">Vienna Residence</h1>
                     <h2 className="header__hero-small">Experiance breath-taking beauty and magnificance of north tirol mountains in the best apartmenets in the region</h2>
                     <RouterLink to={process.env.PUBLIC_URL + "/reservations"}><button className="btn btn--full">reserve now &rarr;</button></RouterLink>
                 </div>
-                <div className="header__bg-box"><img src={HeaderBg} className="header__bg" alt="header background" /></div>
                 <ScrollLink
                     to="section-about"
                     smooth

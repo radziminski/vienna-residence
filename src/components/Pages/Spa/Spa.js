@@ -1,14 +1,15 @@
 import React from 'react';
 import SpaHeader from './SpaHeader/SpaHeader';
 import SectionAboutSpa from './SectionAboutSpa';
-import SectionAwards from '../Home/Sections/SectionAwards';
+import SectionReservations from '../Home/Sections/SectionReservations';
+import { colors } from '../../../data';
 
 const Spa = () => {
     return (
         <main>
             <SpaHeader />
             <SectionAboutSpa />
-            <SectionAwards />
+            <SectionReservations linkerColor={colors.primaryDark}/>
         </main>
     )
 }

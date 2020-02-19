@@ -1,7 +1,14 @@
-import QueenRoomImg from './img/room-queen.jpg';
-import DoubleBedRoomImg from './img/room-two-bed.jpg';
-import SignleBedRoomImg from './img/room-single.jpg';
-import ExclusiveQueenRoomImg from './img/room-queen-exc.jpg';
+// Rooms photos
+import QueenRoomImg from './img/rooms/room-queen.jpg';
+import DoubleBedRoomImg from './img/rooms/room-two-bed.jpg';
+import SignleBedRoomImg from './img/rooms/room-single.jpg';
+import ExclusiveQueenRoomImg from './img/rooms/room-queen-exc.jpg';
+
+// Spa photos
+import spaPhotoFirst from './img/spa/spa-1.jpg';
+import spaPhotoSecond from './img/spa/spa-2.jpg';
+import spaPhotoThird from './img/spa/spa-3.jpg';
+import spaPhotoFourth from './img/spa/spa-4.jpg';
 
 export const viennaResRooms = [
     {
@@ -54,3 +61,5 @@ export const colors = {
     primaryDarkSuper: 'rgb(26, 57, 66)',
     white: '#fff',
 }
+
+export const spaPhotos = [spaPhotoFirst, spaPhotoSecond, spaPhotoThird, spaPhotoFourth];

@@ -11,11 +11,44 @@
         transform: translateY(-50%);
         left: 10%;
         width: 60rem;
+
+        @include respond (small-deskt) {
+            left: 9%;
+            width: 52rem;
+        }
+        @include respond (tab-land) {
+            top: 55%;
+            left: 6%;
+            width: 45rem;
+        }
+        @include respond(tab-port) {
+            top: 55%;
+            left: 50%;
+            width: 80%;
+            max-width: 70rem;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     }
 
     &__hero-big {
         font-weight: 500;
         font-size: 5.5rem;
+
+        @include respond (small-deskt) {
+            font-size: 5.2rem;
+        }
+
+        @include respond (tab-land) {
+            font-size: 4.8rem;
+        }
+
+        @include respond(tab-port) {
+            background-image: $gradient-main;
+            color: $color-white;
+            text-shadow: $text-shadow-main;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
     }
 
     &__hero-small {
@@ -24,6 +57,26 @@
         line-height: 3.5rem;
         letter-spacing: 0.5px;
         margin-bottom: 4rem;
+
+        @include respond (small-deskt) {
+            font-size: 2.2rem;
+        }
+
+        @include respond (tab-land) {
+            font-size: 1.8rem;
+        }
+
+        @include respond(tab-port) {
+            padding: 1rem 2rem;
+            width: 80%;
+            margin: 0 auto;
+            background-image: $gradient-main-reversed;
+            color: $color-white;
+            text-shadow: $text-shadow-main;
+            margin-bottom: 2rem;
+            margin-top: -0.5rem;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
     }
 
     &__bg {
@@ -32,12 +85,29 @@
         right: 0;
         width: 56%;
         z-index: 100;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 0 0);
         clip-path: ellipse(80% 70% at 85% 10%);
         
+        
+        @include respond (small-deskt) {
+            clip-path: ellipse(72% 100vh at 85% 10%);
+            height: 100vh;
+        }
+
+        
+        @include respond(tab-port) {
+            display: none;            
+        }
     }
 
     &__bg-box {
         filter: drop-shadow(0 0.5rem 0.5rem rgba($color-primary, 0.3));
+
+        
+        @include respond(tab-port) {
+            width: 100%;
+            height: 100vh;
+            background-image: url(../../img/header-bg.jpg);
+            background-size: cover; 
+        }
     }
 }

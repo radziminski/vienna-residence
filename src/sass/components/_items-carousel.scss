@@ -20,4 +20,31 @@
         left: 50%;
         transform: translate(-50%, -50%);;
     }
+
+    user-select: none;
+}
+
+.photo-carousel {
+    &__card {
+        height: 40rem;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.9s;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__wrapper {
+        overflow: visible;
+    }
+
+    &__item-wrapper {
+        
+        
+    }
 }

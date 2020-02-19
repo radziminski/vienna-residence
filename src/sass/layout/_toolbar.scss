@@ -1,5 +1,6 @@
 .toolbar {
     width: 100%;
+    overflow: hidden;
     position: fixed;
     left: 0;
     top: 1.4rem;
@@ -10,6 +11,11 @@
     display: flex;
     justify-content: space-between;
     transition: all 0.2s;
+
+
+    @include respond(tab-land) {
+        padding: 0.5rem 10rem;
+    }
 
     &--sticked {
         transform: translateY(-1.4rem);
@@ -30,7 +36,9 @@
     }
 
     &__navigation {
-
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 
     &__navigation-list {
