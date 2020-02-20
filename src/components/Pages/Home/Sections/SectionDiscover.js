@@ -34,9 +34,9 @@ const SectionDiscover = () => {
 
     return (
         <section className="section-discover section--white">
-            <Linker color={colors.primaryDark} />
+            <Linker color={colors.primaryDarkMedium} />
             <h1 className="section-title">Discover Our Hotel</h1>
-            <h2 className="section-subtitle">Our hotel consist of many asdasdsadsadasd asdasd</h2>
+            {/* <h2 className="section-subtitle">Our hotel consist of many asdasdsadsadasd asdasd</h2> */}
             <BoxLinks links={links}/>
         </section>
     )

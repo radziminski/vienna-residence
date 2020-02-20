@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { colors } from '../../data';
 
 const BoxLinks = (props) => {
-    const linkWidth = String(100 / props.links.length) + '%';
+    const linkWidth = window.innerWidth >= 900 ? String(100 / props.links.length) + '%': '100%';
     const links = props.links.map(element => {
-        return <Link style={{color: colors.white, textDecoration: 'none'}} to={process.env.PUBLIC_URL + element.link} key={element.title}><BoxLink 
+        return <Link  style={{color: colors.white, textDecoration: 'none'}} to={process.env.PUBLIC_URL + element.link} key={element.title}><BoxLink 
                     title={element.title}
                     img={element.img}
                     //onClickHandler={element.link}

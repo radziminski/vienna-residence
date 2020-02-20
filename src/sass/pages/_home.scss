@@ -23,7 +23,8 @@
     }
 
     &--blue {
-        background-color: $color-primary-dark;
+        background-color: $color-primary-dark-medium;
+        //background-image: linear-gradient(to bottom right, $color-primary-dark-medium 65%, $color-primary-dark-super 100%);
     }
 
 }
@@ -50,14 +51,79 @@
 .section-rooms {
     padding-left: 3rem;
     padding-right: 3rem;
+
+    &__room-types {
+        color: $color-primary-light-super;
+        display: block;
+        width: 90%;
+        max-width: 90rem;
+        margin: 0 auto;
+        margin-top: -1rem;
+        margin-bottom: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @include respond(phone) { 
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__room-type {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1.6rem;
+        text-align: center;
+        width: 20rem;
+        font-weight: 300;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        @include respond(phone) { 
+            width: 22rem;
+            font-size: 1.3rem;
+        }
+        
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $color-white;
+            margin: 0.2rem auto 0 auto;
+            transition: all 0.15s;
+            opacity: 0.75;
+
+            @include respond(phone) { 
+                margin: 0.5rem auto 0 auto;
+            }
+        }
+
+        &:hover:after {
+            width: 30%;
+        }
+
+        &--active {
+            color: $color-primary-light-medium;
+            &:after {
+                width: 50%;
+                background-color: $color-primary-light-medium;
+            }
+            &:hover:after {
+                width: 50%;
+                background-color: $color-primary-light-medium;
+            }
+        }
+    }
 }
 
 .section-transport {
     background-image: linear-gradient(rgba($color-black, 0.4), rgba($color-black, 0.5)), linear-gradient(to right, rgba($color-primary, 0.6), rgba($color-primary-light, 0.6)), url(../img/transport-bg.jpg);
     background-size: cover;
     background-attachment: fixed;
-    height: 40rem;
     color: $color-white;
+    padding-bottom: 8rem;
 }
 
 .section-reservations {

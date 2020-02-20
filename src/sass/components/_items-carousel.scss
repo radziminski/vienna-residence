@@ -2,6 +2,11 @@
     width: 90%;
     max-width: 130rem;
     margin: 0 auto;
+    overflow: hidden;
+
+    @include respond(phone) {
+        width: 96%;
+    }
 }
 
 .chevron {
@@ -11,9 +16,10 @@
     background-color: $color-white;
     position: relative;
     
+    
     &__pointer {
         color: $color-grey;
-        font-size: 2.6rem;
+        font-size: 2.2rem;
         font-weight: 300;
         position: absolute;
         top: 50%;

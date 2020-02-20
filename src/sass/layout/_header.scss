@@ -49,6 +49,11 @@
             text-shadow: $text-shadow-main;
             box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
         }
+
+        @include respond (phone) {
+            font-size: 3.2rem;
+            padding: 0.5rem;
+        }
     }
 
     &__hero-small {
@@ -76,6 +81,14 @@
             margin-bottom: 2rem;
             margin-top: -0.5rem;
             box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+        }
+
+        @include respond (phone) {
+            font-size: 1.6rem;
+            padding: 1rem;
+            width: 90%;
+            line-height: 2.4rem;
+            margin-bottom: 5rem;
         }
     }
 

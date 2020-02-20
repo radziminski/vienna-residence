@@ -1,7 +1,21 @@
 .reservations-header {
     height: 100vh;
     background-color: rgba($color-primary-light, 0.2);
+    background-image: url(../../img/header-bg.jpg);
+    background-size: contain;
+    background-position: bottom;
     position: relative;
+
+    &__logo-wrapper {
+        position: absolute;
+        top: 24%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $color-white;
+        font-size: 5rem;
+        font-weight: 700;
+        text-shadow: $text-shadow-main;
+    }
 
     &__content-wrapper {
         position: absolute;
@@ -9,5 +23,9 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 80%;
+        background-color: rgba($color-white, 0.85);
+        max-width: 100rem;
+        padding: 2rem;
+        border-radius: 5px;
     }
 }

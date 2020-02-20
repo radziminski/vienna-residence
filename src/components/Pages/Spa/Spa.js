@@ -9,7 +9,7 @@ const Spa = () => {
         <main>
             <SpaHeader />
             <SectionAboutSpa />
-            <SectionReservations linkerColor={colors.primaryDark}/>
+            <SectionReservations linkerColor={colors.primaryDarkMedium}/>
         </main>
     )
 }

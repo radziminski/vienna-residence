@@ -41,6 +41,11 @@
 
     }
 
+    &__btn:hover & {
+        border: 4px solid $color-primary;
+        transform: scale(2);
+    }
+
     &__check-box {
         display: flex;
         justify-content: space-around;
@@ -68,7 +73,7 @@
         font: inherit;
         z-index: 800;
 
-        animation: fadeIn 0.3s;
+        animation: moveInTop 0.3s;
         animation-fill-mode: forwards;
     }
 

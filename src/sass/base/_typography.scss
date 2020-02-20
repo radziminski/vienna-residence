@@ -15,6 +15,13 @@ body {
     font-weight: 500;
     margin-bottom: 4rem;
 
+    @include respond(tab-port) { 
+        font-size: 3.8rem;
+    }
+    @include respond(phone) { 
+        font-size: 3.5rem;
+    }
+
     &:after {
         content: "";
         display: block;

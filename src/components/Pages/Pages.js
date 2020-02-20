@@ -25,13 +25,13 @@ const Pages = ({location}) => {
                 >
                 <div className="route-section">
                     <Switch location={location}>
-                        <Route path={process.env.PUBLIC_URL + "/"} exact component={Home} />
                         <Route path={process.env.PUBLIC_URL + "/home"} component={Home} />
                         <Route path={process.env.PUBLIC_URL + "/spa"} component={Spa} />
                         <Route path={process.env.PUBLIC_URL + "/sport"} component={Sport} />
                         <Route path={process.env.PUBLIC_URL + "/restaurant"} component={Restaurant} />
                         <Route path={process.env.PUBLIC_URL + "/business"} component={Business} />
                         <Route path={process.env.PUBLIC_URL + "/reservations"} component={Reservations} />
+                        <Route path={process.env.PUBLIC_URL + "/"} component={Home} />
                         <Route path={process.env.PUBLIC_URL} component={NotFound} />
                     </Switch>
                     <FooterBig />

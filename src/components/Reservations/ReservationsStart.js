@@ -86,7 +86,7 @@ class ReservationsStart extends Component {
                 <div className="reservations__info-box">
                     <div className="reservations__adults">
                         <IoMdPerson className="reservations__icon"/>
-                        &emsp;{this.state.adultsNum} {this.state.adultsNum === 1 ? 'adult' : 'adults'} 
+                        &emsp;{this.state.adultsNum} {this.state.adultsNum === 1 ? ('adult') : 'adults'} 
                         <div className={adultMinusIconStyleClass} onClick={this.removeAdultHandler}><FiMinusCircle className="reservations__icon-small"/></div>
                         <div className={adultPlusIconStyleClass} onClick={this.addAdultHandler}><FiPlusCircle className="reservations__icon-small"/></div>
                         |&emsp;{this.state.childrenNum} {this.state.childrenNum === 1 ? 'child' : 'children'}

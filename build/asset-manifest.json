@@ -1,24 +1,28 @@
 {
   "files": {
-    "main.css": "/vienna-residence/static/css/main.fa4b1447.chunk.css",
-    "main.js": "/vienna-residence/static/js/main.deaff8e6.chunk.js",
-    "main.js.map": "/vienna-residence/static/js/main.deaff8e6.chunk.js.map",
+    "main.css": "/vienna-residence/static/css/main.804c9506.chunk.css",
+    "main.js": "/vienna-residence/static/js/main.35383a7f.chunk.js",
+    "main.js.map": "/vienna-residence/static/js/main.35383a7f.chunk.js.map",
     "runtime-main.js": "/vienna-residence/static/js/runtime-main.46bfae75.js",
     "runtime-main.js.map": "/vienna-residence/static/js/runtime-main.46bfae75.js.map",
     "static/css/2.c51b6406.chunk.css": "/vienna-residence/static/css/2.c51b6406.chunk.css",
-    "static/js/2.a74fc048.chunk.js": "/vienna-residence/static/js/2.a74fc048.chunk.js",
-    "static/js/2.a74fc048.chunk.js.map": "/vienna-residence/static/js/2.a74fc048.chunk.js.map",
+    "static/js/2.ac869757.chunk.js": "/vienna-residence/static/js/2.ac869757.chunk.js",
+    "static/js/2.ac869757.chunk.js.map": "/vienna-residence/static/js/2.ac869757.chunk.js.map",
     "index.html": "/vienna-residence/index.html",
-    "precache-manifest.c247ac3660dcc9ad80ea0d0c3e967ca2.js": "/vienna-residence/precache-manifest.c247ac3660dcc9ad80ea0d0c3e967ca2.js",
+    "precache-manifest.f5da6f0ed14a7e107b659f80c34fc36c.js": "/vienna-residence/precache-manifest.f5da6f0ed14a7e107b659f80c34fc36c.js",
     "service-worker.js": "/vienna-residence/service-worker.js",
     "static/css/2.c51b6406.chunk.css.map": "/vienna-residence/static/css/2.c51b6406.chunk.css.map",
-    "static/css/main.fa4b1447.chunk.css.map": "/vienna-residence/static/css/main.fa4b1447.chunk.css.map",
-    "static/js/2.a74fc048.chunk.js.LICENSE.txt": "/vienna-residence/static/js/2.a74fc048.chunk.js.LICENSE.txt",
+    "static/css/main.804c9506.chunk.css.map": "/vienna-residence/static/css/main.804c9506.chunk.css.map",
+    "static/js/2.ac869757.chunk.js.LICENSE.txt": "/vienna-residence/static/js/2.ac869757.chunk.js.LICENSE.txt",
     "static/media/main.scss": "/vienna-residence/static/media/transport-bg.24f43ce8.jpg",
     "static/media/business.jpg": "/vienna-residence/static/media/business.76a593f8.jpg",
     "static/media/restaurant.jpg": "/vienna-residence/static/media/restaurant.22ca6da4.jpg",
+    "static/media/room-multi.jpg": "/vienna-residence/static/media/room-multi.3b0289cf.jpg",
     "static/media/room-queen-exc.jpg": "/vienna-residence/static/media/room-queen-exc.d0cb6c24.jpg",
+    "static/media/room-queen-multi.jpg": "/vienna-residence/static/media/room-queen-multi.e9469d1c.jpg",
+    "static/media/room-queen-single.jpg": "/vienna-residence/static/media/room-queen-single.f97dc88c.jpg",
     "static/media/room-queen.jpg": "/vienna-residence/static/media/room-queen.4fced755.jpg",
+    "static/media/room-single-2.jpg": "/vienna-residence/static/media/room-single-2.dba9df84.jpg",
     "static/media/room-single.jpg": "/vienna-residence/static/media/room-single.df6de2ee.jpg",
     "static/media/room-two-bed.jpg": "/vienna-residence/static/media/room-two-bed.652c8726.jpg",
     "static/media/spa-1.jpg": "/vienna-residence/static/media/spa-1.d5fb4007.jpg",
@@ -31,8 +35,8 @@
   "entrypoints": [
     "static/js/runtime-main.46bfae75.js",
     "static/css/2.c51b6406.chunk.css",
-    "static/js/2.a74fc048.chunk.js",
-    "static/css/main.fa4b1447.chunk.css",
-    "static/js/main.deaff8e6.chunk.js"
+    "static/js/2.ac869757.chunk.js",
+    "static/css/main.804c9506.chunk.css",
+    "static/js/main.35383a7f.chunk.js"
   ]
 }

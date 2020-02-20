@@ -5,6 +5,12 @@
     border: none;
     box-shadow: 0 0.4rem 0.8rem rgba($color-black, 0.1);
     transition: all 0.2s;
+    opacity: 0;
+    animation: fadeIn 0.7s forwards;
+
+    @include respond (phone) {
+        height: 45rem;
+    }
 
     &:hover {
         box-shadow: 0 0.5rem 0.6rem rgba($color-black, 0.35); 
@@ -19,10 +25,11 @@
 
     &__img {
         height: 100%;
-        transition: transform 0.5s;
+        transition: transform 0.8s;
+        transform: scale(1.15);
         &:hover {
-            transform: scale(1.2);
-            transition: transform 1.8s;
+            transform: scale(1.0);
+            transition: transform 0.8s;
         }
     }
 
