@@ -2,7 +2,23 @@
     margin-bottom: 3rem;
 }
 
+.u-margin-top-small {
+    margin-top: 1rem;
+}
+.u-margin-top-medium {
+    margin-top: 3rem;
+}
+
 .u-upper-text {
     font-size: 1.2rem;
     margin-top: -0.5rem;
+}
+
+.u-animation-fade-in {
+    opacity: 0;
+    animation: fadeIn 0.2s forwards;
+}
+
+.u-centered-text {
+    text-align: center;
 }

@@ -1,8 +1,10 @@
 .items-carousel__wrapper {
     width: 90%;
-    max-width: 130rem;
+    max-width: 140rem;
     margin: 0 auto;
-    overflow: hidden;
+    
+    //overflow: hidden;
+    padding: 0 6rem;
 
     @include respond(phone) {
         width: 96%;

@@ -123,7 +123,80 @@
     background-size: cover;
     background-attachment: fixed;
     color: $color-white;
-    padding-bottom: 8rem;
+    height: 50rem;
+    position: relative;
+
+    &__btn-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding-top: 4px;
+    }
+
+    &__btn {
+        border: none;
+        text-decoration: none;
+        border-top: 1px solid $color-grey-medium;
+        width: 34%;
+       
+        background-color: transparent;
+        outline: none;
+        color: $color-white;
+        text-align: center;
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+        font: inherit;
+        font-size: 2.2rem;
+        font-weight: 500;
+        position: relative;
+        transition: background-color 0.1s;
+
+        &:nth-child(1), &:nth-child(2) {
+            border-right: 1px solid $color-grey-medium;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100.3%;
+            height: 6px;
+            top: -7px;
+            left: -1px;
+            background-color: $color-primary-light;
+            opacity: 0;
+            transition: opacity 0.1s;
+
+        }
+
+        &:hover {
+            //color: $color-primary-light;
+            border-top: 1px solid $color-primary-light;
+            background-color: rgba($color-primary-dark, 0.9);
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--active {
+            border-top: 1px solid $color-primary-light;
+            background-color: rgba($color-primary-dark, 0.8);
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn-icon {
+        font-size: 2.2rem;
+        margin-bottom: -0.3rem;
+        margin-right: 1rem;
+    }
 }
 
 .section-reservations {
@@ -156,14 +229,14 @@
 .section-awards {
     background-image: $gradient-main;
     width: 100%;
+    padding: 1rem 8rem 2rem 8rem;
 
-    color: $color-white;
-    padding: 2rem 12rem;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     &__award {
         
-        font-size: 2rem;
-        text-align: center;
+        width: 11rem;
     }
 }
