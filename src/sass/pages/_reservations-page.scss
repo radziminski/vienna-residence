@@ -1,0 +1,17 @@
+
+.reservations-header {
+    height: 100vh;
+    background-color: rgba($color-primary-light, 0.2);
+    background-image: url(../../img/header-bg.jpg);
+    background-size: contain;
+    background-position: bottom;
+    position: relative;
+
+    &__content-wrapper {
+        position: absolute;
+        top: 26%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+}

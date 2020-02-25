@@ -1,18 +1,28 @@
-import React from 'react';
-import LogoInline from '../../Layout/Logo/LogoInline';
-import ReservationsStart from '../../Reservations/ReservationsStart';
-//import ReservationsHeader from './ReservationsHeader';
+import React, { Component } from 'react';
+import Button from '../../Button/Button';
 
-const Reservations = () => {
-    return (
-        <header className="reservations-header">
-            <div className="reservations-header__logo-wrapper"><LogoInline /></div>
-            <div className="reservations-header__content-wrapper">
-                <h2 className="reservations-header__title">Vienna Residence - Innsbruck, Tirol, Italy</h2>
-                <ReservationsStart />
+export class Reservations extends Component {
+    render() {
+        return (
+            <div className="reservations">
+                <h2 className="reservations__title">Reservations</h2>
+                <div className="reservations__steps">
+                    <button className="reservations__step reservations__step--active">1. Check Availability</button>
+                    <button className="reservations__step">2. Choose Rooms</button>
+                    <button className="reservations__step">3. Choose Features</button>
+                    <button className="reservations__step">4. Summary</button>
+                </div>
+                <div className="reservations__form">
+                    <div className="reservations__dates-wrapper">
+                        <div className="reservations__date">Check In</div>
+                        <div className="reservations__date">Check Out</div>
+                    </div>
+                    <div className="reservations__btn"><Button type='full' width='100%'>Check Availability</Button></div>
+                </div>
+                
             </div>
-        </header>
-    )
+        )
+    }
 }
 
-export default Reservations
+export default Reservations;

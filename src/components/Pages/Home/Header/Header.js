@@ -3,6 +3,7 @@ import HeaderBg from '../../../../img/header-bg.jpg';
 import { MdArrowDownward } from 'react-icons/md';
 import { Link as ScrollLink} from 'react-scroll';
 import {Link as RouterLink} from 'react-router-dom';
+import Button from '../../../Button/Button';
 
 export default class Header extends Component {
 
@@ -17,7 +18,7 @@ export default class Header extends Component {
                 <div className="header__text-box">
                     <h1 className="header__hero-big">Vienna Residence</h1>
                     <h2 className="header__hero-small">Experiance breath-taking beauty and magnificance of north tirol mountains in the best apartmenets in the region</h2>
-                    <RouterLink to={process.env.PUBLIC_URL + "/reservations"}><button className="btn btn--full">reserve now &rarr;</button></RouterLink>
+                    <RouterLink to={process.env.PUBLIC_URL + "/reservations"}><Button type='full'>reserve now &rarr;</Button></RouterLink>
                 </div>
                 <ScrollLink
                     to="section-about"
