@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "95934264a42a6b7df4f8ffd69a063490",
+    "revision": "c3072151f9a1c039ce62db47b7864a3b",
     "url": "/vienna-residence/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vienna-residence/static/css/2.c51b6406.chunk.css"
   },
   {
-    "revision": "efde508cde31abf7f532",
-    "url": "/vienna-residence/static/css/main.d7139a92.chunk.css"
+    "revision": "20c01ff0028464fe1440",
+    "url": "/vienna-residence/static/css/main.4f43538f.chunk.css"
   },
   {
     "revision": "0872c5fbe1b93d804b78",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vienna-residence/static/js/2.d6551d90.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "efde508cde31abf7f532",
-    "url": "/vienna-residence/static/js/main.440f2691.chunk.js"
+    "revision": "20c01ff0028464fe1440",
+    "url": "/vienna-residence/static/js/main.2f5e2146.chunk.js"
   },
   {
     "revision": "b49689faed4a7316039b",
