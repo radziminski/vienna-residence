@@ -1,13 +1,13 @@
 import React from 'react';
+import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
 // types: full, 
 
 const Button = (props) => {
-    let selector = null;
-    if (props.type) selector = 'btn--' + String(props.type);
+    const classNames = new BEMClassNameGenerator('btn');
 
     return (
-        <button className={"btn " + selector} style={{width: props.width ? props.width : 'auto'}}>{props.children}</button>
+        <button className={classNames.blockWithModifiers(props.type)} style={{width: props.width ? props.width : 'auto'}}>{props.children}</button>
     )
 }
 

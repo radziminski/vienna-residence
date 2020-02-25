@@ -1,0 +1,90 @@
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.7;
+    color: $color-grey-dark; 
+}
+
+.section-title {
+    font-size: 4rem;
+    text-align: center;
+    color: $color-grey;
+    position: relative;
+    font-weight: 500;
+    margin-bottom: 4rem;
+
+    @include respond(tab-port) { 
+        font-size: 3.8rem;
+    }
+    @include respond(phone) { 
+        font-size: 3.5rem;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        width: 30rem;
+        height: 2px;
+        background-image: linear-gradient(to right, transparent 0, transparent 10%, $color-primary 30%, $color-primary 70%, transparent 90%);
+        position: absolute;
+        top: 96%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &--light {
+        color: $color-white;
+
+        &:after {
+            background-image: linear-gradient(to right, transparent 0, transparent 10%, $color-white 30%, $color-white 70%, transparent 90%);
+        }
+    }
+
+}
+
+.section-subtitle {
+    font-size: 2.2rem;
+    text-align: center;
+    color: $color-grey;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    margin-top: -2rem;
+    letter-spacing: 0.5px;
+    
+    
+    &--light {
+        color: $color-primary-light-super;
+        //text-shadow: $text-shadow-main;
+    }
+}
+
+.section-desc {
+    font-size: 1.4rem;
+    color: $color-primary-light-super;
+    text-align: center;
+    font-weight: 300;
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    margin-top: -2rem;
+}
+
+.icon-title {
+    font-size: 4rem;
+    display: block;
+}
+
+.column-title {
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.paragraph {
+    font-size: inherit;
+    color: inherit;
+}

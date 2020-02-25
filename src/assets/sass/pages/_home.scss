@@ -1,0 +1,242 @@
+.section {
+    
+    &--white,
+    &--grey,
+    &--blue,
+    &--transparent {
+        padding: $gutter-section-start 0 $gutter-section-end 0;
+        @include respond(tab-land) {
+            padding: 3.5rem 0 8rem 0;
+        }
+        @include respond(tab-port) {
+            padding: 3rem 0 6rem 0;
+        }
+        position: relative;
+    }
+
+    &--white {
+        background-color: $color-white;
+    }
+
+    &--grey {
+        background-color: $color-grey-light;
+    }
+
+    &--blue {
+        background-color: $color-primary-dark-medium;
+        //background-image: linear-gradient(to bottom right, $color-primary-dark-medium 65%, $color-primary-dark-super 100%);
+    }
+
+}
+
+.section-numbers {
+    background-image: $gradient-main;
+    padding: 1rem 0;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 140rem;
+        margin: 0 auto;
+    }
+    
+}
+
+.section-about {
+    height: 100%;
+}
+
+.section-rooms {
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    &__room-types {
+        color: $color-primary-light-super;
+        display: block;
+        width: 90%;
+        max-width: 90rem;
+        margin: 0 auto;
+        margin-top: -1rem;
+        margin-bottom: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        @include respond(phone) { 
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__room-type {
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-size: 1.6rem;
+        text-align: center;
+        width: 20rem;
+        font-weight: 300;
+        cursor: pointer;
+        transition: all 0.1s;
+
+        @include respond(phone) { 
+            width: 22rem;
+            font-size: 1.3rem;
+        }
+        
+        &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $color-white;
+            margin: 0.2rem auto 0 auto;
+            transition: all 0.15s;
+            opacity: 0.75;
+
+            @include respond(phone) { 
+                margin: 0.5rem auto 0 auto;
+            }
+        }
+
+        &:hover:after {
+            width: 30%;
+        }
+
+        &--active {
+            color: $color-primary-light-medium;
+            &:after {
+                width: 50%;
+                background-color: $color-primary-light-medium;
+            }
+            &:hover:after {
+                width: 50%;
+                background-color: $color-primary-light-medium;
+            }
+        }
+    }
+}
+
+.section-transport {
+    background-image: linear-gradient(rgba($color-black, 0.4), rgba($color-black, 0.5)), linear-gradient(to right, rgba($color-primary, 0.6), rgba($color-primary-light, 0.6)), url(../img/transport-bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: $color-white;
+    height: 50rem;
+    position: relative;
+
+    &__btn-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding-top: 4px;
+    }
+
+    &__btn {
+        border: none;
+        text-decoration: none;
+        border-top: 1px solid $color-grey-medium;
+        width: 34%;
+       
+        background-color: transparent;
+        outline: none;
+        color: $color-white;
+        text-align: center;
+        padding: 1.5rem 3rem;
+        cursor: pointer;
+        font: inherit;
+        font-size: 2.2rem;
+        font-weight: 500;
+        position: relative;
+        transition: background-color 0.1s;
+
+        &:nth-child(1), &:nth-child(2) {
+            border-right: 1px solid $color-grey-medium;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100.3%;
+            height: 6px;
+            top: -7px;
+            left: -1px;
+            background-color: $color-primary-light;
+            opacity: 0;
+            transition: opacity 0.1s;
+
+        }
+
+        &:hover {
+            //color: $color-primary-light;
+            border-top: 1px solid $color-primary-light;
+            background-color: rgba($color-primary-dark, 0.9);
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        &--active {
+            border-top: 1px solid $color-primary-light;
+            background-color: rgba($color-primary-dark, 0.8);
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__btn-icon {
+        font-size: 2.2rem;
+        margin-bottom: -0.3rem;
+        margin-right: 1rem;
+    }
+}
+
+.section-reservations {
+    color: $color-grey;
+
+    &__subtitle {
+        width: 90%;
+        max-width: 120rem;
+        padding: 0 0.2rem;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 0.2rem;
+        font-weight: 500;
+        font-size: 2.4rem;
+    }
+
+    &__desc {
+        width: 90%;
+        padding-right: 50%;
+        max-width: 120rem;
+        padding: 0 0.2rem;
+        text-align: left;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        font-weight: 300;
+        font-size: 1.6rem;
+    }
+}
+
+.section-awards {
+    background-image: $gradient-main;
+    width: 100%;
+    padding: 1rem 8rem 2rem 8rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__award {
+        
+        width: 11rem;
+    }
+}

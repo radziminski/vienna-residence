@@ -1,0 +1,15 @@
+.calendar {
+    &__wrapper {
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+
+    &__closeBtn {
+        color: $color-black;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: orangered;
+    }
+}

@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom'
+import { BrowserRouter as Router} from 'react-router-dom';
 
-import Pages from './components/Pages/Pages';
-import Toolbar from './components/Layout/Toolbar/Toolbar';
-import ScrollToTop from './components/Pages/ScrollToTop';
+import Pages from './views/Pages';
+import Toolbar from './layouts/Toolbar/Toolbar';
+import ScrollToTop from './views/ScrollToTop';
 
-import './sass/main.scss';
+import './assets/sass/main.scss';
 import { animateScroll } from 'react-scroll';
 
 function App() {

@@ -1,0 +1,13 @@
+.not-found {
+    height: 95vh;
+    position: relative;
+
+    &__hero {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 6rem;
+        color: $color-grey;
+    }
+}
