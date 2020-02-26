@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/vienna-residence/static/css/main.4f43538f.chunk.css",
-    "main.js": "/vienna-residence/static/js/main.641a1985.chunk.js",
-    "main.js.map": "/vienna-residence/static/js/main.641a1985.chunk.js.map",
+    "main.css": "/vienna-residence/static/css/main.f76ba57a.chunk.css",
+    "main.js": "/vienna-residence/static/js/main.7cbaa710.chunk.js",
+    "main.js.map": "/vienna-residence/static/js/main.7cbaa710.chunk.js.map",
     "runtime-main.js": "/vienna-residence/static/js/runtime-main.46bfae75.js",
     "runtime-main.js.map": "/vienna-residence/static/js/runtime-main.46bfae75.js.map",
     "static/css/2.c51b6406.chunk.css": "/vienna-residence/static/css/2.c51b6406.chunk.css",
-    "static/js/2.57bd9639.chunk.js": "/vienna-residence/static/js/2.57bd9639.chunk.js",
-    "static/js/2.57bd9639.chunk.js.map": "/vienna-residence/static/js/2.57bd9639.chunk.js.map",
+    "static/js/2.48e5c5e1.chunk.js": "/vienna-residence/static/js/2.48e5c5e1.chunk.js",
+    "static/js/2.48e5c5e1.chunk.js.map": "/vienna-residence/static/js/2.48e5c5e1.chunk.js.map",
     "index.html": "/vienna-residence/index.html",
-    "precache-manifest.d65178d85f8f0fb554e38db313589789.js": "/vienna-residence/precache-manifest.d65178d85f8f0fb554e38db313589789.js",
+    "precache-manifest.bf8e6de3b9ba545a9d9de412056fddf5.js": "/vienna-residence/precache-manifest.bf8e6de3b9ba545a9d9de412056fddf5.js",
     "service-worker.js": "/vienna-residence/service-worker.js",
     "static/css/2.c51b6406.chunk.css.map": "/vienna-residence/static/css/2.c51b6406.chunk.css.map",
-    "static/css/main.4f43538f.chunk.css.map": "/vienna-residence/static/css/main.4f43538f.chunk.css.map",
-    "static/js/2.57bd9639.chunk.js.LICENSE.txt": "/vienna-residence/static/js/2.57bd9639.chunk.js.LICENSE.txt",
+    "static/css/main.f76ba57a.chunk.css.map": "/vienna-residence/static/css/main.f76ba57a.chunk.css.map",
+    "static/js/2.48e5c5e1.chunk.js.LICENSE.txt": "/vienna-residence/static/js/2.48e5c5e1.chunk.js.LICENSE.txt",
     "static/media/award-1.png": "/vienna-residence/static/media/award-1.c6819f58.png",
     "static/media/award-2.png": "/vienna-residence/static/media/award-2.837ce8c5.png",
     "static/media/award-3.png": "/vienna-residence/static/media/award-3.c6819f58.png",
@@ -39,8 +39,8 @@
   "entrypoints": [
     "static/js/runtime-main.46bfae75.js",
     "static/css/2.c51b6406.chunk.css",
-    "static/js/2.57bd9639.chunk.js",
-    "static/css/main.4f43538f.chunk.css",
-    "static/js/main.641a1985.chunk.js"
+    "static/js/2.48e5c5e1.chunk.js",
+    "static/css/main.f76ba57a.chunk.css",
+    "static/js/main.7cbaa710.chunk.js"
   ]
 }
