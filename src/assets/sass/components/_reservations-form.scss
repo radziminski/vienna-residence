@@ -1,0 +1,68 @@
+.reservations-form {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+
+    &__btn {
+        margin: 0 auto;
+        width: 30rem;
+        font-size: 2rem;
+    }
+
+    &__date-wrapper {
+        display: inline-block;
+        margin-bottom: 2rem;
+        
+    }
+    
+    &__dates-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__icon {
+        margin-bottom: -0.15rem;
+        color: $color-primary;
+        font-size: 1.7rem;
+        margin-right: 0.8rem;
+        text-align: left;
+    }
+
+    &__date-icon {
+        margin: 0 1.5rem -0.3rem 0.5rem;
+    }
+
+    &__date {
+        width: 40%;
+        text-align: center;
+    }
+
+    &__date-label {
+        padding-top: 0.5rem;
+        display: inline-block;
+        margin-right: 3rem;
+        text-align: left;
+    }
+
+    &__date-input {
+       padding: 0.5rem 1rem;
+       background-color: $color-grey-light;
+       border-radius: 5px;
+       width: 18rem; 
+       display: inline-block;
+       cursor: pointer;
+    }
+
+    &__people-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+        margin-top: 1.5rem;
+    }
+
+    &__summary {
+        margin-bottom: 2rem;
+    }
+
+}

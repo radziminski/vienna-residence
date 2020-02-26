@@ -7,7 +7,7 @@ const Button = (props) => {
     const classNames = new BEMClassNameGenerator('btn');
 
     return (
-        <button className={classNames.blockWithModifiers(props.type)} style={{width: props.width ? props.width : 'auto'}}>{props.children}</button>
+        <button onClick={props.onClick} className={classNames.blockWithModifiers(props.type)} style={{width: props.width ? props.width : 'auto'}}>{props.children}</button>
     )
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
-import { IoIosBed } from 'react-icons/io';
-import { IoMdPerson } from 'react-icons/io';
+import { IoIosBed, IoMdPerson, IoIosStar } from 'react-icons/io';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
 const RoomCard = (props) => {
@@ -11,8 +10,8 @@ const RoomCard = (props) => {
             <div className={classNames.element("img-box")}>
                 <img src={props.img} className={classNames.element("img")} alt="Room"/>
                 <div className={classNames.element("info-wrapper")}>
-                    <div className={classNames.element("hotel")}>{props.hotel}</div>                     
-                    <div className={classNames.element("price")}>from {props.price}$/night</div>
+                    <div className={classNames.element("hotel")}>{props.hotel}<span className={classNames.element('stars')}> <IoIosStar /><IoIosStar /><IoIosStar /><IoIosStar /></span></div>                     
+                    <div className={classNames.element("price-wrapper")}>from <span className={classNames.element('price')}>{props.price}$</span> /night</div>
                 </div>
             </div>
             <div className={classNames.element("details")}>

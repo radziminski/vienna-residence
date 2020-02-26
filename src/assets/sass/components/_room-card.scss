@@ -53,13 +53,23 @@
         font-weight: 500;
     }
 
-    &__price {
+    &__stars {
+        font-size: 1.2rem;
+    }
+
+    &__price-wrapper {
         display: block;
         padding: 0.5rem 1rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         background-color: $color-primary;
         color: $color-white;
         text-align: center;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+    }
+
+    &__price {
+        font-size: 1.5rem;
         font-weight: 500;
     }
 

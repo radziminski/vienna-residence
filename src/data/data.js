@@ -21,7 +21,7 @@ export const viennaResRooms = [
         title: "Single Bed Room",
         subTitle: "Standard experiance - 15m^2",
         price: "249",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Single Bed",
         people: "1",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -32,7 +32,7 @@ export const viennaResRooms = [
         title: "Single Bed Room",
         subTitle: "Premium experiance - 25m^2",
         price: "299",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Single Bed",
         people: "1",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -43,7 +43,7 @@ export const viennaResRooms = [
         title: "Premium Signle Room",
         subTitle: "Exclusive experiance - 40m^2",
         price: "399",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Single Bed",
         people: "1",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -54,7 +54,7 @@ export const viennaResRooms = [
         title: "Signle + Child Room",
         subTitle: "Standard experiance - 30m^2",
         price: "449",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Single Bed",
         people: "2",
         desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -65,7 +65,7 @@ export const viennaResRooms = [
         title: "Double Bed Room",
         subTitle: "Standard experiance - 20m^2",
         price: "399",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "2 Single Beds",
         people: "2",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -76,7 +76,7 @@ export const viennaResRooms = [
         title: "Standard Queen Room",
         subTitle: "Standard experiance - 20m^2",
         price: "399",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Double Bed",
         people: "2",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -87,7 +87,7 @@ export const viennaResRooms = [
         title: "Premium Queen Room",
         subTitle: "Exclusive experiance - 40m^2",
         price: "499",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "Double Bed",
         people: "2",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -98,7 +98,7 @@ export const viennaResRooms = [
         title: "Multiple People Room",
         subTitle: "Standard experiance - 40m^2",
         price: "499",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "2 Double Beds",
         people: "4",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
@@ -109,7 +109,7 @@ export const viennaResRooms = [
         title: "Multiple People Room",
         subTitle: "Exclusive experiance - 70m^2",
         price: "699",
-        hotel: "Vienna Res. ****",
+        hotel: "Hotel ",
         bed: "4 Single Beds",
         people: "4",
         desc: "LLorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue orci ut egestas aliquet. Proin vel sagittis libero. Fusce ullamcorper risus et augue volutpat, sit amet ornare nibh laoreet. "
