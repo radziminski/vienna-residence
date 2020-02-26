@@ -3,12 +3,17 @@ import { IoIosAirplane, IoIosCar, IoIosTrain } from 'react-icons/io';
 import Linker from '../../../../layouts/Linker';
 import { colors } from '../../../../data/data';
 import SubSection from './SubSection';
+import Section from '../../../../layouts/Section/Section';
+import SectionTitle from '../../../../components/Typography/SectionTitle';
+import BEMClassNameGenerator from '../../../../BEMClassNameGenerator';
 
 class SectionTransport extends Component {
 
     state = {
         content: 'all',
     }
+
+    classNames = new BEMClassNameGenerator('section-transport');
 
     onButtonClickedHandler = (button) => {
         if (this.state.content === button) this.setState({content: 'all'});
@@ -60,35 +65,32 @@ class SectionTransport extends Component {
 
 
         return (
-            <section className="section-transport section--transparent">
-            <Linker color={colors.white} />
-            <h1 className="section-title section-title--light">How to get here?</h1>
+            <Section name={this.classNames.block()} type='transparent'>
+                <Linker color={colors.white} />
+                <SectionTitle type='light'>How to get here?</SectionTitle>
 
-            {content}
+                {content}
 
-            <div className="section-transport__btn-wrapper">
-                <button 
-                    className={"section-transport__btn " + 
-                                (this.state.content === 'byPlane' ? " section-transport__btn--active" : null)}
-                    onClick={() => this.onButtonClickedHandler('byPlane')}>
-                    <IoIosAirplane className="section-transport__btn-icon" /> By Plane
-                </button>
-                <button 
-                    className={"section-transport__btn " + 
-                                (this.state.content === 'byCar' ? " section-transport__btn--active" : null)}
-                    onClick={() => this.onButtonClickedHandler('byCar')}>
-                    <IoIosCar className="section-transport__btn-icon"/>
-                     By Car
-                </button>
-                <button 
-                    className={"section-transport__btn " + 
-                                (this.state.content === 'byTrain' ? " section-transport__btn--active" : null)}
-                    onClick={() => this.onButtonClickedHandler('byTrain')}>
-                    <IoIosCar className="section-transport__btn-icon"/>
-                     By Train
-                </button>
-                </div>
-            </section>
+                <div className={this.classNames.element('btn-wrapper')}>
+                    <button 
+                        className={this.state.content === 'byPlane' ? this.classNames.elementWithModifiers('btn', 'active'): this.classNames.element('btn')}
+                        onClick={() => this.onButtonClickedHandler('byPlane')}>
+                        <IoIosAirplane className={this.classNames.element('btn-icon')} /> By Plane
+                    </button>
+                    <button 
+                        className={this.state.content === 'byCar' ? this.classNames.elementWithModifiers('btn', 'active'): this.classNames.element('btn')}
+                        onClick={() => this.onButtonClickedHandler('byCar')}>
+                        <IoIosCar className={this.classNames.element('btn-icon')}/>
+                        By Car
+                    </button>
+                    <button 
+                        className={this.state.content === 'byTrain' ? this.classNames.elementWithModifiers('btn', 'active'): this.classNames.element('btn')}
+                        onClick={() => this.onButtonClickedHandler('byTrain')}>
+                        <IoIosCar className={this.classNames.element('btn-icon')}/>
+                        By Train
+                    </button>
+                    </div>
+            </Section>
         )
     }
 }

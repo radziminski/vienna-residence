@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import { HashRouter as Router} from 'react-router-dom';
+import { animateScroll } from 'react-scroll';
 
-import Pages from './views/Pages';
 import Toolbar from './layouts/Toolbar/Toolbar';
+import Pages from './views/Pages';
 import ScrollToTop from './views/ScrollToTop';
 
 import './assets/sass/main.scss';
-import { animateScroll } from 'react-scroll';
 
 function App() {
 	return (

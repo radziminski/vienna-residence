@@ -7,6 +7,8 @@ import spaImg from '../../../assets/img/spa.jpg';
 import restaurantImg from '../../../assets/img/restaurant.jpg';
 import sportImg from '../../../assets/img/sport.jpg';
 import businessImg from '../../../assets/img/business.jpg';
+import Section from '../../../layouts/Section/Section';
+import SectionTitle from '../../../components/Typography/SectionTitle';
 
 const SectionDiscover = () => {
     const links = [
@@ -33,12 +35,12 @@ const SectionDiscover = () => {
     ]
 
     return (
-        <section className="section-discover section--white">
+        <Section name="section-discover" type="white">
             <Linker color={colors.primaryDarkMedium} />
-            <h1 className="section-title">Discover Our Hotel</h1>
+            <SectionTitle>Discover Our Hotel</SectionTitle>
             {/* <h2 className="section-subtitle">Our hotel consist of many asdasdsadsadasd asdasd</h2> */}
             <BoxLinks links={links}/>
-        </section>
+        </Section>
     )
 }
 

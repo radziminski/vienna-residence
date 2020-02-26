@@ -1,12 +1,16 @@
 import React from 'react'
 import LogoInline from '../Logo/LogoInline'
+import BEMClassNameGenerator from '../../BEMClassNameGenerator'
+import ColumnTitle from '../../components/Typography/ColumnTitle';
 
 const FooterBig = () => {
+    const parrentClassNames = new BEMClassNameGenerator('footer-big');
+
     return (
         <section className="footer-big">
             <div className="row">
                 <div className="col-1-of-4">
-                    <h3 className="column-title"><LogoInline parrentClassName={'footer-big__'}/></h3>
+                    <ColumnTitle><LogoInline parrentClassNames={parrentClassNames}/></ColumnTitle>
                     <p className="paragraph">
                         Phone:&emsp;+48 123 345 456<br/> 
                         Email:&emsp;contact@viennares.com<br/> 
@@ -15,7 +19,7 @@ const FooterBig = () => {
                     </p>
                 </div>
                 <div className="col-1-of-4">
-                    <h3 className="column-title">Site Map</h3>
+                    <ColumnTitle>Site Map</ColumnTitle>
                     Home<br/>
                     About<br/>
                     Apartements<br/>
@@ -25,10 +29,10 @@ const FooterBig = () => {
                     Transport<br/>
                 </div>
                 <div className="col-1-of-4">
-                    <h3 className="column-title">Apartements</h3>
+                    <ColumnTitle>Apartements</ColumnTitle>
                 </div>
                 <div className="col-1-of-4">
-                    <h3 className="column-title">Social Media</h3>
+                    <ColumnTitle>Social Media</ColumnTitle>
                 </div>
             </div>
         </section>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CountUp from 'react-countup';
+import Section from '../../../layouts/Section/Section';
 
 class SectionNumbers extends Component {
     state = {
@@ -22,48 +23,50 @@ class SectionNumbers extends Component {
 
     render() {
         return (
-            <section ref={this.state.elementRef} className="section-numbers">
-            <div className="section-numbers__wrapper">
-                <div className="count-up">
-                    <div className="count-up__title">Years of work:</div>
-                    <CountUp
-                        className="count-up__number"
-                        end={8}
-                        duration={3}
-                        start={this.state.countUpStart}
-                        
-                    />
-                </div>
-                <div className="count-up">
-                    <div className="count-up__title">Monthly visitors:</div>
-                    <CountUp
-                        className="count-up__number"
-                        end={140}
-                        duration={3.2}
-                        start={this.state.countUpStart}
-                    />
-                </div>
-                <div className="count-up">
-                    <div className="count-up__title">Overrall booking.com rate:</div>
-                    <CountUp
-                        className="count-up__number"
-                        end={8.9}
-                        decimals={1}
-                        duration={4}
-                        start={this.state.countUpStart}
-                    />
-                </div>
-                <div className="count-up">
-                    <div className="count-up__title">Total satisfied customers:</div>
-                    <CountUp
-                        className="count-up__number"
-                        end={9500}
-                        duration={3.8}
-                        start={this.state.countUpStart}
-                    />
-                </div>
-                </div>
-            </section>
+            <div ref={this.state.elementRef} >
+                <Section name="section-numbers">
+                <div className="section-numbers__wrapper">
+                    <div className="count-up">
+                        <div className="count-up__title">Years of work:</div>
+                        <CountUp
+                            className="count-up__number"
+                            end={8}
+                            duration={3}
+                            start={this.state.countUpStart}
+                            
+                        />
+                    </div>
+                    <div className="count-up">
+                        <div className="count-up__title">Monthly visitors:</div>
+                        <CountUp
+                            className="count-up__number"
+                            end={140}
+                            duration={3.2}
+                            start={this.state.countUpStart}
+                        />
+                    </div>
+                    <div className="count-up">
+                        <div className="count-up__title">Overrall booking.com rate:</div>
+                        <CountUp
+                            className="count-up__number"
+                            end={8.9}
+                            decimals={1}
+                            duration={4}
+                            start={this.state.countUpStart}
+                        />
+                    </div>
+                    <div className="count-up">
+                        <div className="count-up__title">Total satisfied customers:</div>
+                        <CountUp
+                            className="count-up__number"
+                            end={9500}
+                            duration={3.8}
+                            start={this.state.countUpStart}
+                        />
+                    </div>
+                    </div>
+                </Section>
+            </div>
         )
     } 
 }

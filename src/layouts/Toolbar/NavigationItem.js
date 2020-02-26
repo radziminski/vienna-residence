@@ -2,7 +2,7 @@ import React from 'react';
 
 export const NavigationItem = (props) => {
     return (
-        <li className={props.parrentClassName + 'navigation-item'}>
+        <li className={props.parrentClassNames.element('navigation-item')}>
             {props.children}
         </li>
     )

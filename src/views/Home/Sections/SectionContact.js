@@ -1,12 +1,14 @@
 import React from 'react';
 import Form from '../../../components/ContactForm/ContactForm';
+import Section from '../../../layouts/Section/Section';
+import SectionTitle from '../../../components/Typography/SectionTitle';
 
 const SectionContact = () => {
     return (
-        <section className="section-contact section--grey">
-            <h2 className="section-title">Contact Us!</h2>
+        <Section name="section-contact" type="grey">
+            <SectionTitle>Contact Us!</SectionTitle>
             <Form />
-        </section>
+        </Section>
     )
 }
 

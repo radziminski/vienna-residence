@@ -4,6 +4,9 @@ import RoomCard from '../../../components/RoomCard/RoomCard';
 
 import { viennaResRooms, colors } from '../../../data/data';
 import Linker from '../../../layouts/Linker';
+import BEMClassNameGenerator from '../../../BEMClassNameGenerator';
+import Section from '../../../layouts/Section/Section';
+import SectionTitle from '../../../components/Typography/SectionTitle';
 
 class SectionRooms extends Component {
     constructor(props) {
@@ -18,6 +21,8 @@ class SectionRooms extends Component {
             cardsNum
         }
     }
+
+    classNames = new BEMClassNameGenerator('section-rooms');
     
 
     onRoomTypeChangeHandler = (type) => {
@@ -76,33 +81,30 @@ class SectionRooms extends Component {
         )
 
         return (
-            <section className="section-rooms section--blue">
+            <Section name={this.classNames.block()} type='blue'>
                 <Linker color={colors.white} />
-                <h1 className="section-title section-title--light">Our Apartements</h1>
-                <div className="section-rooms__room-types">
+                <SectionTitle type='light'>Our Apartements</SectionTitle>
+
+                <div className={this.classNames.element('room-types')}>
                     <div onClick={() => this.onRoomTypeChangeHandler('all')} 
-                        className={"section-rooms__room-type " + 
-                                    (this.state.roomType === 'all' ? 'section-rooms__room-type--active' : null)}>
+                        className={this.state.roomType === 'all' ? this.classNames.elementWithModifiers('room-type', 'active') : this.classNames.element('room-type')}>
                         All Rooms
                     </div>
                     <div onClick={() => this.onRoomTypeChangeHandler('single')} 
-                        className={"section-rooms__room-type " + 
-                                    (this.state.roomType === 'single' ? 'section-rooms__room-type--active' : null)}>
+                        className={this.state.roomType === 'single' ? this.classNames.elementWithModifiers('room-type', 'active') : this.classNames.element('room-type')}>
                         Single Rooms
                     </div>
                     <div onClick={() => this.onRoomTypeChangeHandler('double')} 
-                        className={"section-rooms__room-type " + 
-                                    (this.state.roomType === 'double' ? 'section-rooms__room-type--active' : null)}>
+                        className={this.state.roomType === 'double' ? this.classNames.elementWithModifiers('room-type', 'active') : this.classNames.element('room-type')}>
                         Double Rooms
                     </div>
                     <div onClick={() => this.onRoomTypeChangeHandler('multi')} 
-                        className={"section-rooms__room-type " + 
-                                    (this.state.roomType === 'multi' ? 'section-rooms__room-type--active' : null)}>
+                        className={this.state.roomType === 'mutli' ? this.classNames.elementWithModifiers('room-type', 'active') : this.classNames.element('room-type')}>
                         Multi people Rooms
                     </div>
                 </div>
-                <div className="items-carousel__wrapper">
 
+                <div className="items-carousel__wrapper">
                     <ItemsCarousel
                         className="items-carousel"
                         infiniteLoop
@@ -122,9 +124,8 @@ class SectionRooms extends Component {
                         leftChevron={leftChevron}
                         children={rooms}
                     />
-                    
                 </div>
-            </section>
+            </Section>
         )
     } 
 }

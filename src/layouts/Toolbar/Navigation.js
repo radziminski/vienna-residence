@@ -4,12 +4,12 @@ import { NavigationItem } from './NavigationItem';
 export const Navigation = (props) => {
     return (
         
-        <div className={props.parrentClassName + 'navigation'}>
-            <ul className={props.parrentClassName + 'navigation-list'}>
-                <NavigationItem parrentClassName={props.parrentClassName}>home</NavigationItem>
-                <NavigationItem parrentClassName={props.parrentClassName}>about</NavigationItem>
-                <NavigationItem parrentClassName={props.parrentClassName}>apartments</NavigationItem>
-                <NavigationItem parrentClassName={props.parrentClassName}>reservation</NavigationItem>
+        <div className={props.parrentClassNames.element('navigation')}>
+            <ul className={props.parrentClassNames.element('navigation-list')}>
+                <NavigationItem parrentClassNames={props.parrentClassNames}>home</NavigationItem>
+                <NavigationItem parrentClassNames={props.parrentClassNames}>about</NavigationItem>
+                <NavigationItem parrentClassNames={props.parrentClassNames}>apartments</NavigationItem>
+                <NavigationItem parrentClassNames={props.parrentClassNames}>reservation</NavigationItem>
             </ul>
         </div>
     )

@@ -1,10 +1,11 @@
 import React from 'react';
+import Section from '../../../layouts/Section/Section';
+import SectionTitle from '../../../components/Typography/SectionTitle';
 
 const SectionAbout = () => {
     return (
-        <section className="section-about section--white" name="section-about">
-            
-            <h1 className="section-title">About Us</h1>
+        <Section type='white' name="section-about">
+            <SectionTitle>About Us</SectionTitle>
             <div className="row">
                 <div className="col-1-of-2">
                     <p className="paragraph">
@@ -12,7 +13,7 @@ const SectionAbout = () => {
                     </p>
                 </div>
             </div>
-        </section>
+        </Section>
     )
 }
 
