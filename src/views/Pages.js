@@ -30,7 +30,7 @@ const Pages = ({location}) => {
                         <Route path={process.env.PUBLIC_URL + "/sport"} component={Sport} />
                         <Route path={process.env.PUBLIC_URL + "/restaurant"} component={Restaurant} />
                         <Route path={process.env.PUBLIC_URL + "/business"} component={Business} />
-                        <Route path={process.env.PUBLIC_URL + "/reservations"} component={ReservationsPage} />
+                        <Route path={process.env.PUBLIC_URL + "/reservations/:adultsNum?/:childrenNum?/:checkIn?/:checkOut?"} component={ReservationsPage} />
                         <Route path={process.env.PUBLIC_URL + "/"} component={Home} />
                         <Route path={process.env.PUBLIC_URL} component={NotFound} />
                     </Switch>

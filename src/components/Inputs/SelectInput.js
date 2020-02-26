@@ -10,7 +10,7 @@ export const SelectInput = props => {
             <div className={classNames.element("title")}>{props.title}</div>
             <div className={classNames.element("input-wrapper")}>
                 <div className={classNames.element("icon")}>{props.icon}</div>
-                <select className={classNames.element("input")}>
+                <select className={classNames.element("input")} defaultValue={props.selected}>
                     {props.options.map(option => {
                         return (<option key={option} className={classNames.element('option')}>{option}</option>)
                     })}

@@ -3,6 +3,7 @@ import { IoIosCalendar, IoMdPerson } from 'react-icons/io';
 import { FiPlusCircle, FiMinusCircle } from 'react-icons/fi';
 import Calendar from 'react-calendar';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
+import { Link } from 'react-router-dom';
 
 class ReservationsStart extends Component {
 
@@ -75,6 +76,12 @@ class ReservationsStart extends Component {
         const childMinusIconStyleClass = this.state.childrenNum > 0 ? 
             this.classNames.element('icon-wrapper') : this.classNames.elementWithModifiers('icon-wrapper', 'disabled');
 
+        let reservationsLink = process.env.PUBLIC_URL + `/reservations/${this.state.adultsNum}/${this.state.childrenNum}`;
+        if (this.state.calendarDate) {
+            reservationsLink += ('/' + this.state.calendarDate[0].toLocaleDateString());
+            reservationsLink += ('/' + this.state.calendarDate[1].toLocaleDateString());
+        }
+
         return (
             <div className={this.classNames.block()}>
                 <div className={this.classNames.element("check-box")} onClick={this.toggleCalendar}>
@@ -100,7 +107,11 @@ class ReservationsStart extends Component {
                 <div className={this.classNames.element("options-box")}>
 
                 </div>
-                <button className={this.classNames.element("btn")}>Check Availability</button>
+                <Link to={reservationsLink}
+                    className={this.classNames.element("link")}
+                >
+                    <button className={this.classNames.element("btn")}>Check Availability</button>
+                </Link>
             </div>
         );
     }

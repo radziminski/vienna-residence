@@ -34,6 +34,10 @@ export class Reservations extends Component {
                         <div className={this.classNames.element("form-wrapper")}>
                             <ReservationsStartForm
                                 onClick={this.nextStep}
+                                adultsNum={this.props.adultsNum}
+                                childrenNum={this.props.childrenNum}
+                                checkIn={this.props.checkIn}
+                                checkOut={this.props.checkOut}
                             />
                         </div>)
                 break;
@@ -50,6 +54,8 @@ export class Reservations extends Component {
                 subTitle = 'Summary';
                 break;
 
+            default:
+                break;
         }
 
 

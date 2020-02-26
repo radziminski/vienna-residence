@@ -14,7 +14,7 @@ export class ContactForm extends Component {
                 <h2 className={this.classNames.element("section-title")}>Personal data</h2>
 
                 <div className={this.classNames.element("input-field")}>
-                    <label for="first-name" className={this.classNames.element("label")}>First Name:</label>
+                    <label className={this.classNames.element("label")}>First Name:</label>
                     <div className={this.classNames.element("icon-wrapper")}>
                         <i className={this.classNames.element("icon")}><IoMdPerson className={this.classNames.element("icon")}/></i>
                     </div>
@@ -22,7 +22,7 @@ export class ContactForm extends Component {
                 </div>
 
                 <div className={this.classNames.element("input-field")}>
-                    <label for="last-name" className={this.classNames.element("label")}>Last Name</label>
+                    <label className={this.classNames.element("label")}>Last Name</label>
                     <div className={this.classNames.element("icon-wrapper")}>
                         <i className={this.classNames.element("icon")}><IoMdPerson/></i>
                     </div>
@@ -31,14 +31,14 @@ export class ContactForm extends Component {
 
                 <h2 className={this.classNames.element("section-title")}>Contact Data</h2>
                 <div className={this.classNames.element("input-field")}>
-                    <label for="email" className={this.classNames.element("label")}>Email:</label>
+                    <label  className={this.classNames.element("label")}>Email:</label>
                     <div className={this.classNames.element("icon-wrapper")}>
                         <i className={this.classNames.element("icon")}><IoMdPerson/></i>
                     </div>
                     <input type="email" className={this.classNames.element("input-text")} placeholder="Email" id="email" required />
                 </div>
                 
-                <label for="email" className={this.classNames.element("label-msg")}>Your Messege</label>
+                <label  className={this.classNames.element("label-msg")}>Your Messege</label>
                 <textarea className={this.classNames.element("input-messege")} placeholder="Your Messege..." id="message"></textarea>
                 
                                     

@@ -16,18 +16,31 @@
     position: relative;
     user-select: none;
 
-
-    &__btn {
+    &__link {
         display: block;
         height: 100%;
         width: 20%;
         max-width: 20rem;
         outline: none;
         border: none;
-        background-color: $color-primary-light;
-        color: $color-white;
         text-decoration: none;
         border-left: 4px solid $color-primary-light;
+        font: inherit;
+        cursor: pointer;
+    }
+
+    &__btn {
+        display: block;
+        height: 100%;
+        width: 100%;
+        
+        outline: none;
+        border: none;
+        margin: none;
+        color: $color-white;
+        text-decoration: none;
+        background-color: $color-primary-light;
+
         font: inherit;
         font-size: 1.8rem;
         font-weight: 500;
