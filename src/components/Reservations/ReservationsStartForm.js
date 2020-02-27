@@ -30,10 +30,10 @@ export class ReservationsStartForm extends Component {
         console.log(this.props.childrenNum)
         console.log(typeof this.props.checkIn)
         if (this.props.adultsNum) {
-            this.setState({adultsNum: this.props.adultsNum});
+            this.setState({adultsNum: parseInt(this.props.adultsNum)});
         }
         if (this.props.childrenNum) {
-            this.setState({adultsNum: this.props.childrenNum});
+            this.setState({childrenNum: parseInt(this.props.childrenNum)});
         }
         if (this.props.checkIn) {
             let checkInDate;
@@ -59,6 +59,7 @@ export class ReservationsStartForm extends Component {
                 this.setState({checkOutDate: minDate});
             }
         }
+        console.log('CDUPDT')
     }
 
     setCheckInDate(date) {
@@ -146,7 +147,7 @@ export class ReservationsStartForm extends Component {
  
         let summary = `${this.state.hotelNights} Hotel Nights: `;
         summary += ` ${this.state.adultsNum} Adult${this.state.adultsNum !== 1 ? `s` : ``}`;
-        
+        console.log(summary)
         if (this.state.childrenNum > 0) 
             (summary += `, ${this.state.childrenNum} Child${this.state.childrenNum !== 1 ? `ren` : ``}`);
         if (this.state.babiesNum > 0) 
@@ -172,7 +173,7 @@ export class ReservationsStartForm extends Component {
                 />
             );
         }
-        let minDate = this.nextDay(today)
+        let minDate = this.state.checkInDate ? this.nextDay(this.state.checkInDate) : this.nextDay(today);
         let checkOutCalendar = (
             <Calendar 
                 className={this.classNames.element("calendar")}
@@ -182,7 +183,7 @@ export class ReservationsStartForm extends Component {
             />
         );
         if (this.state.checkOutDate) {
-            minDate = this.state.checkInDate ? this.nextDay(this.state.checkInDate) : this.nextDay(today);
+            
             checkOutCalendar = (
                 <Calendar 
                     className={this.classNames.element("calendar")}
@@ -228,14 +229,16 @@ export class ReservationsStartForm extends Component {
                     </div>
                     <div className={this.classNames.element("people-wrapper")}>
                         <SelectInput 
-                            selected={this.state.adultsNum} 
+                            defaultSelect={this.state.adultsNum} 
                             options={Array(15).fill().map((_, num) => 1 + num)} 
                             title={'Adults'} 
                             icon={<IoMdPerson />}
                             onChange={this.onAdultsNumChangedHandler}
                         />
+                        {console.log('after passing:' + this.state.adultsNum)}
                         <SelectInput 
-                            selected={this.state.childrenNum} 
+                            defaultSelect={this.state.childrenNum} 
+                            
                             options={Array(15).fill().map((_, num) => num)} 
                             title={'Children'} 
                             icon={<FaChild />}
