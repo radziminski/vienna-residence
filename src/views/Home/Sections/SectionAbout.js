@@ -18,3 +18,4 @@ const SectionAbout = () => {
 }
 
 export default SectionAbout;
+
