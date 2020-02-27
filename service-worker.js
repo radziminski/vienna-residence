@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vienna-residence/precache-manifest.d44c0c93343191a0c55480bff8cdc11a.js"
+  "/vienna-residence/precache-manifest.e2dcd0b2b1816a6a967c5608d34d2d45.js"
 );
 
 self.addEventListener('message', (event) => {
