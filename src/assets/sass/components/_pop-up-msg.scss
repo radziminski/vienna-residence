@@ -1,0 +1,38 @@
+.pop-up-msg {
+    visibility: hidden;
+
+    background-color: $color-primary;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -8rem;
+    cursor: auto;
+    user-select: none;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        margin-left: -5px;
+        border-width: 0.7rem;
+        border-style: solid;
+        border-color: $color-primary transparent transparent transparent;
+    }
+
+    &--active {
+        visibility: visible;
+        animation: fadeInFadeOut 2.8s;
+        animation-fill-mode: forwards;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+}

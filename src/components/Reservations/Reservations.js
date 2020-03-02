@@ -9,12 +9,37 @@ export class Reservations extends Component {
 
     state = {
         reservationStep: 1,
+        dates: {
+            checkInDate: null,
+            checkOutDate: null,
+            hotelNights: 0,
+        },
+        people: {
+            adultsNum: 0,
+            childrenNum: 0,
+            babiesNum: 0,
+        }
+    }
+
+    onStepOneFinishedHandler = (formData) => {
+        this.setState({
+            reservationStep: 2,
+            dates: {
+                checkInDate: formData.checkInDate,
+                checkOutDate: formData.checkOutDate,
+                hotelNights: formData.hotelNights
+            }, 
+            people: {
+                adultsNum: formData.adultsNum,
+                childrenNum: formData.childrenNum,
+                babiesNum: formData.babiesNum,
+         }
+        })
     }
 
     nextStep = () => {
         let currentStep = this.state.reservationStep;
         currentStep++;
-        console.log(currentStep);
         this.setState({reservationStep: currentStep});
     }
 
@@ -33,17 +58,22 @@ export class Reservations extends Component {
                 content = (
                         <div className={this.classNames.element("form-wrapper")}>
                             <ReservationsStartForm
-                                onClick={this.nextStep}
-                                adultsNum={this.props.adultsNum}
-                                childrenNum={this.props.childrenNum}
-                                checkIn={this.props.checkIn}
-                                checkOut={this.props.checkOut}
+                                queryParams={this.props.queryParams}
+                                nextStep={this.onStepOneFinishedHandler}
                             />
                         </div>)
                 break;
 
             case 2:
                 subTitle = 'Choose prefered room types:';
+                content = (
+                    <div className={this.classNames.element("form-wrapper")}>
+                        {this.state.dates.checkInDate.toString()}<br />
+                        {this.state.dates.checkOutDate.toString()}<br />
+                        {this.state.people.adultsNum}<br />
+                        {this.state.people.childrenNum}<br />
+                        {this.state.people.babiesNum}<br />
+                    </div>)
                 break;
             
             case 3:
@@ -64,10 +94,10 @@ export class Reservations extends Component {
             <div className={this.classNames.block()}>
                 <h2 className={this.classNames.element("title")}>Reservations</h2>
                 <div className={this.classNames.element("steps")}>
-                    <button className={this.classNames.elementWithModifiers("step", "active")}>1. Check Availability</button>
-                    <button className={this.classNames.element("step")}>2. Choose Rooms</button>
-                    <button className={this.classNames.element("step")}>3. Choose Features</button>
-                    <button className={this.classNames.element("step")}>4. Summary</button>
+                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 1 ? "active" : "")}>1. Check Availability</button>
+                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 2 ? "active" : "")}>2. Choose Rooms</button>
+                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 3 ? "active" : "")}>3. Choose Features</button>
+                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 4 ? "active" : "")}>4. Summary</button>
                 </div>
 
                 <div className={this.classNames.element("sub-title")}>{subTitle}</div>

@@ -76,10 +76,10 @@ class ReservationsStart extends Component {
         const childMinusIconStyleClass = this.state.childrenNum > 0 ? 
             this.classNames.element('icon-wrapper') : this.classNames.elementWithModifiers('icon-wrapper', 'disabled');
 
-        let reservationsLink = process.env.PUBLIC_URL + `/reservations/${this.state.adultsNum}/${this.state.childrenNum}`;
+        let reservationsLink = process.env.PUBLIC_URL + `/reservations/?adults-num=${this.state.adultsNum}&children-num=${this.state.childrenNum}`;
         if (this.state.calendarDate) {
-            reservationsLink += ('/' + this.state.calendarDate[0].toLocaleDateString());
-            reservationsLink += ('/' + this.state.calendarDate[1].toLocaleDateString());
+            reservationsLink += ('&check-in=' + this.state.calendarDate[0].toLocaleDateString());
+            reservationsLink += ('&check-out=' + this.state.calendarDate[1].toLocaleDateString());
         }
 
         return (

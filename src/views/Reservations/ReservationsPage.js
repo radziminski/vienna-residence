@@ -1,23 +1,17 @@
 import React from 'react';
 import Reservations from '../../components/Reservations/Reservations';
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 //import ReservationsHeader from './ReservationsHeader';
 const ReservationsPage = () => {
 
-    let { adultsNum, childrenNum, checkIn, checkOut } = useParams();
-    console.log(adultsNum)
-    console.log(childrenNum)
-    console.log(checkIn)
-    console.log(checkOut)
+    let queryParams = new URLSearchParams(useLocation().search);
+    console.log(queryParams)
     return (
         <header className="reservations-header">
             {/* <div className="reservations-header__logo-wrapper"><LogoInline /></div> */}
             <div className="reservations-header__content-wrapper">
                 <Reservations 
-                    adultsNum={adultsNum}
-                    childrenNum={childrenNum}
-                    checkIn={checkIn}
-                    checkOut={checkOut}
+                    queryParams={queryParams}
                 />
             </div>
         </header>

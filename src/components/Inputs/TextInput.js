@@ -1,7 +1,7 @@
 import React from 'react';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
-export const TextInput = props => {
+const TextInput = props => {
     const classNames = new BEMClassNameGenerator('text-input');
 
 
@@ -15,3 +15,5 @@ export const TextInput = props => {
         </div>
     )
 }
+
+export default TextInput;

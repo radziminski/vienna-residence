@@ -4,9 +4,10 @@ import Button from '../Button/Button';
 import { IoIosCalendar, IoMdPerson } from 'react-icons/io';
 import { FaArrowAltCircleRight, FaChild } from 'react-icons/fa';
 import { MdAttachMoney, MdChildFriendly } from 'react-icons/md';
-import { SelectInput } from '../Inputs/SelectInput';
-import { TextInput } from '../Inputs/TextInput';
+import SelectInput from '../Inputs/SelectInput';
+import TextInput from '../Inputs/TextInput';
 import Calendar from 'react-calendar';
+import PopUpMsg from '../PopUpMsg/PopUpMsg';
 
 export class ReservationsStartForm extends Component {
     classNames = new BEMClassNameGenerator('reservations-form');
@@ -21,34 +22,38 @@ export class ReservationsStartForm extends Component {
         childrenNum: 0,
         babiesNum: 0,
         premium: false,
+        showCheckInMsg: false,
+        showCheckOutMsg: false,
         
     }
 
+    timeout = null;
+
+    // Component Lifecycle
+
     componentDidMount() {
-        console.log('Component did mount')
-        console.log(this.props.adultsNum)
-        console.log(this.props.childrenNum)
-        console.log(typeof this.props.checkIn)
-        if (this.props.adultsNum) {
-            this.setState({adultsNum: parseInt(this.props.adultsNum)});
+        console.log('Component did mount');
+        if (this.props.queryParams.has('adults-num')) {
+            this.setState({adultsNum: parseInt(this.props.queryParams.get('adults-num'))});
         }
-        if (this.props.childrenNum) {
-            this.setState({childrenNum: parseInt(this.props.childrenNum)});
+        if (this.props.queryParams.has('children-num')) {
+            this.setState({childrenNum: parseInt(this.props.queryParams.get('children-num'))});
         }
-        if (this.props.checkIn) {
+        if (this.props.queryParams.has('check-in')) {
             let checkInDate;
-            checkInDate = this.dateStringToDateObj(this.props.checkIn);
+            checkInDate = this.dateStringToDateObj(this.props.queryParams.get('check-in'));
             this.setState({
                 checkInDate: checkInDate,
             });
         }
-        if (this.props.checkOut) {
+        if (this.props.queryParams.has('check-out')) {
             let checkOutDate;
-            checkOutDate = this.dateStringToDateObj(this.props.checkOut);
+            checkOutDate = this.dateStringToDateObj(this.props.queryParams.get('check-out'));
             this.setState({
                 checkOutDate: checkOutDate,
             });
         }
+        
     }
 
     componentDidUpdate() {
@@ -58,9 +63,15 @@ export class ReservationsStartForm extends Component {
                 minDate.setDate(minDate.getDate() + 1);
                 this.setState({checkOutDate: minDate});
             }
+            let dateDifference = new Date(this.state.checkOutDate - this.state.checkInDate);
+            dateDifference = dateDifference.getDate() - 1;
+            if (dateDifference !== this.state.hotelNights)
+                this.setState({hotelNights: dateDifference});
         }
-        console.log('CDUPDT')
+        console.log('Comp_Did_UPDT')
     }
+
+    // Component methods
 
     setCheckInDate(date) {
         this.setState({
@@ -86,6 +97,7 @@ export class ReservationsStartForm extends Component {
 
     dayMonthYearToDateObj(day, month, year) {
         const date = new Date();
+        date.setHours(0,0,0,0);
         date.setDate(day);
         date.setMonth(month);
         date.setFullYear(year);
@@ -107,7 +119,8 @@ export class ReservationsStartForm extends Component {
     onCheckInChangeHandler = date => {
         this.setState({
             checkInDate: date,
-            showCheckInCalendar: false
+            showCheckInCalendar: false,
+            showCheckOutCalendar: true
         })
     }
 
@@ -131,6 +144,7 @@ export class ReservationsStartForm extends Component {
     closeCheckInCalendar() {
         this.setState({showCheckInCalendar: false});
     }
+
     closeCheckOutCalendar() {
         this.setState({showCheckOutCalendar: false});
     }
@@ -141,17 +155,44 @@ export class ReservationsStartForm extends Component {
         return newDate;
     } 
 
+    onNextStepHandler = () => {
+        ;
+        if (!this.state.checkInDate && !this.state.showCheckInMsg) {
+            this.setState({showCheckInMsg: true});
+            this.timeout = setTimeout(() => {
+                this.setState({showCheckInMsg: false})
+            }, 3500);
+        } else
+        if (!this.state.checkOutDate && !this.state.showCheckOutMsg && this.state.checkInDate) {
+            this.setState({showCheckOutMsg: true});
+            if (this.timeout) clearTimeout(this.timeout);
+            console.log(this.timeout)
+            this.timeout = setTimeout(() => {
+                this.setState({showCheckOutMsg: false})
+            }, 3500)
+        } else
+        if (this.state.checkInDate && this.state.checkOutDate) {
+            if (this.timeout) clearTimeout(this.timeout);
+            this.props.nextStep({...this.state});
+        }
+    }
+
 
     render() {
         const today = new Date();
+        let maxDate = new Date();
+        maxDate.setFullYear(maxDate.getFullYear() + 1)
+        today.setHours(0,0,0,0);
  
-        let summary = `${this.state.hotelNights} Hotel Nights: `;
-        summary += ` ${this.state.adultsNum} Adult${this.state.adultsNum !== 1 ? `s` : ``}`;
-        console.log(summary)
+        let summary = `${this.state.hotelNights} Hotel Nights\t`;
+        summary += `|\t${this.state.adultsNum} Adult${this.state.adultsNum !== 1 ? `s` : ``}\t`;
+
         if (this.state.childrenNum > 0) 
-            (summary += `, ${this.state.childrenNum} Child${this.state.childrenNum !== 1 ? `ren` : ``}`);
+            (summary += `|\t${this.state.childrenNum} Child${this.state.childrenNum !== 1 ? `ren` : ``}\t`);
         if (this.state.babiesNum > 0) 
-            (summary += `, ${this.state.babiesNum} Bab${this.state.babiesNum !== 1 ? `ies` : `y`}`);
+            (summary += `|\t${this.state.babiesNum} Bab${this.state.babiesNum !== 1 ? `ies` : `y`}\t`);
+
+        summary = summary.split("\t").map((element, key) => (<span key={key}>{element}&ensp;</span>));
 
 
         let checkInCalendar = (
@@ -159,6 +200,7 @@ export class ReservationsStartForm extends Component {
                 className={this.classNames.element("calendar")}
                 locale="en"
                 minDate={today}
+                maxDate={maxDate}
                 onChange={this.onCheckInChangeHandler}
             />
         );
@@ -168,10 +210,16 @@ export class ReservationsStartForm extends Component {
                     className={this.classNames.element("calendar")}
                     locale="en"
                     minDate={today}
+                    maxDate={maxDate}
                     onChange={this.onCheckInChangeHandler}
                     value={this.state.checkInDate}
                 />
             );
+
+            // Max length of reservations can be 30 days
+            maxDate = new Date(this.state.checkInDate);
+            maxDate.setMonth(maxDate.getMonth() + 1);
+            maxDate.setDate(maxDate.getDate() - 1); 
         }
         let minDate = this.state.checkInDate ? this.nextDay(this.state.checkInDate) : this.nextDay(today);
         let checkOutCalendar = (
@@ -179,6 +227,7 @@ export class ReservationsStartForm extends Component {
                 className={this.classNames.element("calendar")}
                 locale="en"
                 minDate={minDate}
+                maxDate={maxDate}
                 onChange={this.onCheckOutChangeHandler}
             />
         );
@@ -189,27 +238,36 @@ export class ReservationsStartForm extends Component {
                     className={this.classNames.element("calendar")}
                     locale="en"
                     minDate={minDate}
+                    maxDate={maxDate}
                     onChange={this.onCheckOutChangeHandler}
                     value={this.state.checkOutDate}
                 />
             )
         }
 
+        let checkInPopUp = this.state.showCheckInMsg ? <PopUpMsg >Fill this first</PopUpMsg> : null;
+        let checkOutPopUp = this.state.showCheckOutMsg ? <PopUpMsg >Fill this first</PopUpMsg> : null;
+
 
         return (
             <div className={this.classNames.block()}>
+
                     <div className={this.classNames.element("dates-wrapper")}>
                         <div className={this.classNames.element("date-wrapper")}>
+
                             <div className={this.classNames.element("date-label")}>
                                 <FaArrowAltCircleRight className={this.classNames.element("icon")}/>
                                 Check In:
                             </div>
+
                             <div className={this.classNames.element("date-input")}
                                 onClick={() => this.toggleyCalendar('checkIn')}
                             >
                                 <IoIosCalendar className={this.classNames.element("date-icon")}/>
                                 {this.state.checkInDate ? this.state.checkInDate.toLocaleDateString() : ''}
+                                {checkInPopUp}
                             </div>
+
                             {this.state.showCheckInCalendar ? checkInCalendar : null}
                         </div>
 
@@ -218,12 +276,15 @@ export class ReservationsStartForm extends Component {
                                 <FaArrowAltCircleRight className={this.classNames.element("icon")}/>
                                 Check Out:
                             </div>
+
                             <div className={this.classNames.element("date-input")} 
                                 onClick={() => this.toggleyCalendar('checkOut')}
                             >
                                 <IoIosCalendar className={this.classNames.element("date-icon")}/>
                                 {this.state.checkOutDate ? this.state.checkOutDate.toLocaleDateString() : ''}
+                                {checkOutPopUp}
                             </div>
+
                             {this.state.showCheckOutCalendar ? checkOutCalendar : null}
                         </div>
                     </div>
@@ -235,7 +296,6 @@ export class ReservationsStartForm extends Component {
                             icon={<IoMdPerson />}
                             onChange={this.onAdultsNumChangedHandler}
                         />
-                        {console.log('after passing:' + this.state.adultsNum)}
                         <SelectInput 
                             defaultSelect={this.state.childrenNum} 
                             
@@ -247,6 +307,7 @@ export class ReservationsStartForm extends Component {
                         <SelectInput 
                             options={Array(15).fill().map((_, num) => num)} 
                             title={'Babies'} 
+                            defaultSelect={this.state.babiesNum} 
                             icon={<MdChildFriendly />}
                             onChange={this.onBabiesNumChangedHandler}
                         />
@@ -255,7 +316,7 @@ export class ReservationsStartForm extends Component {
                     <div className={this.classNames.element("summary")}>
                      <span style={{fontWeight: '400'}}>Summary:&ensp;</span> {summary}
                     </div>
-                    <div className={this.classNames.element("btn")}><Button onClick={this.props.onClick} type='full' width='100%'>Check Availability</Button></div>
+                    <div className={this.classNames.element("btn")}><Button onClick={this.onNextStepHandler} type='full' width='100%'>Check Availability</Button></div>
                 </div>
         )
     }
