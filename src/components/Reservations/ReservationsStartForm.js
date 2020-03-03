@@ -159,6 +159,7 @@ export class ReservationsStartForm extends Component {
         ;
         if (!this.state.checkInDate && !this.state.showCheckInMsg) {
             this.setState({showCheckInMsg: true});
+            if (this.timeout) clearTimeout(this.timeout);
             this.timeout = setTimeout(() => {
                 this.setState({showCheckInMsg: false})
             }, 3500);

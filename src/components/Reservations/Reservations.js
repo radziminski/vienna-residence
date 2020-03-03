@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
 import ReservationsStartForm from './ReservationsStartForm';
+import ReservationsRoomChoice from './ReservationsRoomChoice';
 
 export class Reservations extends Component {
     classNames = new BEMClassNameGenerator('reservations');
@@ -49,6 +50,12 @@ export class Reservations extends Component {
         this.setState({reservationStep: currentStep});
     }
 
+    stepChangedHandler = (step) => {
+        if (this.state.reservationStep !== step) {
+            this.setState({reservationStep: step});
+        }
+    }
+
     render() {
         let subTitle = null;
         let content = null;
@@ -68,11 +75,7 @@ export class Reservations extends Component {
                 subTitle = 'Choose prefered room types:';
                 content = (
                     <div className={this.classNames.element("form-wrapper")}>
-                        {this.state.dates.checkInDate.toString()}<br />
-                        {this.state.dates.checkOutDate.toString()}<br />
-                        {this.state.people.adultsNum}<br />
-                        {this.state.people.childrenNum}<br />
-                        {this.state.people.babiesNum}<br />
+                        <ReservationsRoomChoice />
                     </div>)
                 break;
             
@@ -94,7 +97,11 @@ export class Reservations extends Component {
             <div className={this.classNames.block()}>
                 <h2 className={this.classNames.element("title")}>Reservations</h2>
                 <div className={this.classNames.element("steps")}>
-                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 1 ? "active" : "")}>1. Check Availability</button>
+                    <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 1 ? "active" : "")}
+                        onClick={() => this.stepChangedHandler(1)}
+                    >
+                        1. Check Availability
+                    </button>
                     <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 2 ? "active" : "")}>2. Choose Rooms</button>
                     <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 3 ? "active" : "")}>3. Choose Features</button>
                     <button className={this.classNames.elementWithModifiers("step", this.state.reservationStep === 4 ? "active" : "")}>4. Summary</button>

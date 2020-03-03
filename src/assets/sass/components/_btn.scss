@@ -12,5 +12,17 @@
         font: inherit;
         border: none;
         cursor: pointer;
+        
+    }
+
+    &--full {
+        width: 30rem;
+        font-size: 2rem;
+        
+    }
+
+    &--centered {
+        margin: 3rem auto 4rem auto;
+        display: block;
     }
 }

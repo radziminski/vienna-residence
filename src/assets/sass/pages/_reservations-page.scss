@@ -1,6 +1,6 @@
 
 .reservations-header {
-    height: 100vh;
+    min-height: 100vh;
     background-color: rgba($color-primary-light, 0.2);
     background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.2), rgba($color-primary, 0.2)), url(../img/reservations-bg.jpg);
     //background-image: url(../img/reservations-bg.jpg);
@@ -9,11 +9,13 @@
     position: relative;
 
     &__content-wrapper {
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        width: 100%;
-        transform: translate(-50%, -50%);
-        
+        // position: absolute;
+        // top: 18%;
+        // left: 50%;
+        // width: 100%;
+        // transform: translate(-50%, 0);
+        margin: 0 auto;
+        padding-top: 18rem;
+        padding-bottom: 5rem;
     }
 }

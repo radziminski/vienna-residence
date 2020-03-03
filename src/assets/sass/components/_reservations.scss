@@ -78,3 +78,15 @@
     }
 
 }
+
+.reservations-room-choice {
+    &__btn-wrapper {
+        display: block;
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    &__summary {
+        font-size: 1.8rem;
+    }
+}

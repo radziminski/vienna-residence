@@ -12,7 +12,7 @@ class SectionRooms extends Component {
     constructor(props) {
         super(props);
         let cardsNum = 4;
-        if (window.innerWidth < 900) cardsNum = 3;
+        if (window.innerWidth < 1400) cardsNum = 3;
         if (window.innerWidth < 600) cardsNum = 2;
         if (window.innerWidth < 500) cardsNum = 1;
         this.state = {
