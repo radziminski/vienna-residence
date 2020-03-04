@@ -5,7 +5,7 @@ import Calendar from 'react-calendar';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 import { Link } from 'react-router-dom';
 
-class ReservationsStart extends Component {
+class ReservationsStarter extends Component {
 
     state = {
         showCalendar: false,
@@ -117,4 +117,4 @@ class ReservationsStart extends Component {
     }
 }
 
-export default ReservationsStart;
+export default ReservationsStarter;

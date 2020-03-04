@@ -12,13 +12,20 @@
         font: inherit;
         border: none;
         cursor: pointer;
-        
+        transition: all 0.15s;
     }
 
     &--full {
         width: 30rem;
         font-size: 2rem;
         
+        
+    }
+
+    &--disabled {
+        background-image: linear-gradient(to left, rgba(56, 56, 56, 0.75), rgba(94, 94, 94, 0.75));
+        width: 30rem;
+        font-size: 2rem;
     }
 
     &--centered {

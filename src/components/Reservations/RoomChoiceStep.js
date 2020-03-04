@@ -4,6 +4,19 @@ import Button from '../Button/Button';
 import {viennaResRooms as rooms} from '../../data/data';
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
+const toPeopleString = (people) => {
+    let finalString = people.adultsNum === 1 ? '1 Adult' : `${people.adultsNum} Adults`;
+    if (people.childrenNum) {
+        finalString += ' | ';
+        finalString += people.childrenNum === 1 ? '1 Child' : `${people.childrenNum} Children`;
+    }
+    if (people.babiesNum) {
+        finalString += ' | ';
+        finalString += people.babiesNum === 1 ? '1 Baby' : `${people.babiesNum} Babies`;
+    }
+    return finalString;
+}
+
 export class ReservationsRoomChoice extends Component {
     classNames = new BEMClassNameGenerator('reservations-room-choice');
 
@@ -35,6 +48,11 @@ export class ReservationsRoomChoice extends Component {
     render() {
         return (
             <div>
+                <div className={this.classNames.element('reservations-info')}>
+                    Showing room availability for: <br />
+                    {this.props.dates.checkInDate.toLocaleDateString()}&ensp;-&ensp;{this.props.dates.checkOutDate.toLocaleDateString()}&ensp;|&ensp;({this.props.dates.hotelNights} nights stay)<br />
+                    {toPeopleString(this.props.people)}
+                </div>
                 {this.rooms}
                 <div className={this.classNames.element('summary')}>
                     <span className="u-semi-bolded-text">Summary:</span>&ensp;Selected 2 rooms, capable of accomodating maximum 3 people

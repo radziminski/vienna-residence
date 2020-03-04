@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 import BEMClassNameGenerator from '../../BEMClassNameGenerator';
 
-import ReservationsStartForm from './ReservationsStartForm';
-import ReservationsRoomChoice from './ReservationsRoomChoice';
+import ReservationInfoStep from './ReservationInfoStep';
+import RoomChoiceStep from './RoomChoiceStep';
 
 export class Reservations extends Component {
     classNames = new BEMClassNameGenerator('reservations');
@@ -16,11 +16,83 @@ export class Reservations extends Component {
             hotelNights: 0,
         },
         people: {
-            adultsNum: 0,
+            adultsNum: 2,
             childrenNum: 0,
             babiesNum: 0,
+        },
+        rooms: {},
+        features: {
+            earlyCheckIn: false,
+            lateCheckOut: false,
+            spaEntrance: false,
         }
     }
+
+    componentDidMount() {
+        let dates = {};
+        let people = {};
+
+        if (this.props.queryParams.has('adults-num')) {
+            people = {
+                ...people,
+                adultsNum: parseInt(this.props.queryParams.get('adults-num'))
+            }
+        }
+        if (this.props.queryParams.has('children-num')) {
+            people = {
+                ...people,
+                childrenNum: parseInt(this.props.queryParams.get('children-num'))
+            }
+        }
+        if (this.props.queryParams.has('check-in')) {
+            let checkInDate;
+            checkInDate = this.dateStringToDateObj(this.props.queryParams.get('check-in'));
+            dates = {
+                ...dates,
+                checkInDate: checkInDate
+            }
+        }
+        if (this.props.queryParams.has('check-out')) {
+            let checkOutDate;
+            checkOutDate = this.dateStringToDateObj(this.props.queryParams.get('check-out'));
+            dates = {
+                ...dates,
+                checkOutDate: checkOutDate,
+            }
+        }
+
+        this.setState({
+            dates: {
+                ...this.state.dates,
+                ...dates
+            },
+            people: {
+                ...this.state.people,
+                ...people
+            }
+        })
+        console.log('component did mount')
+    }
+
+    dateStringToDateObj(dateString) {
+        const firstDotIndex = dateString.indexOf('.')
+        const day = dateString.slice(0, firstDotIndex);
+        const monthAndYear = dateString.slice(firstDotIndex + 1, dateString.length);
+        const month = monthAndYear.slice(0, 2);
+        const year = monthAndYear.slice(3, dateString.length);
+        
+        return this.dayMonthYearToDateObj(day, month - 1, year);
+    }
+
+    dayMonthYearToDateObj(day, month, year) {
+        const date = new Date();
+        date.setHours(0,0,0,0);
+        date.setDate(day);
+        date.setMonth(month);
+        date.setFullYear(year);
+        return date;
+    }
+
 
     onStepOneFinishedHandler = (formData) => {
         this.setState({
@@ -35,7 +107,7 @@ export class Reservations extends Component {
                 childrenNum: formData.childrenNum,
                 babiesNum: formData.babiesNum,
          }
-        })
+        });
     }
 
     nextStep = () => {
@@ -64,8 +136,9 @@ export class Reservations extends Component {
                 subTitle = 'Please fill out information below:';
                 content = (
                         <div className={this.classNames.element("form-wrapper")}>
-                            <ReservationsStartForm
-                                queryParams={this.props.queryParams}
+                            <ReservationInfoStep
+                                dates={this.state.dates}
+                                people={this.state.people}
                                 nextStep={this.onStepOneFinishedHandler}
                             />
                         </div>)
@@ -75,7 +148,10 @@ export class Reservations extends Component {
                 subTitle = 'Choose prefered room types:';
                 content = (
                     <div className={this.classNames.element("form-wrapper")}>
-                        <ReservationsRoomChoice />
+                        <RoomChoiceStep 
+                            dates={this.state.dates}
+                            people={this.state.people}
+                        />
                     </div>)
                 break;
             
