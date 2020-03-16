@@ -1,6 +1,6 @@
 .reservations-form {
     display: block;
-    padding: 2rem;
+    padding: 2rem 1rem;
     font-size: 1.8rem;
 
     &__btn {
@@ -73,12 +73,54 @@
     &__people-wrapper {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
         margin-top: 1.5rem;
+    }
+
+    &__premium {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    &__premium-text {
+        padding-left: 1.5rem;
     }
 
     &__summary {
         margin-bottom: 3rem;
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column-title {
+        font-size: 2rem;
+        font-weight: 500;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+
+    &__features {
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background-color: $color-grey-medium-3;
+        }
     }
 
 }

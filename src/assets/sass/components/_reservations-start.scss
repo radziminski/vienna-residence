@@ -33,7 +33,7 @@
         display: block;
         height: 100%;
         width: 100%;
-        
+
         outline: none;
         border: none;
         margin: none;
@@ -50,7 +50,6 @@
         &:hover {
             background-color: $color-primary;
         }
-
     }
 
     &__btn:hover & {
@@ -99,10 +98,10 @@
         padding: 0.5rem 2rem;
         position: relative;
         cursor: pointer;
-        
+
         &--break {
             &:after {
-                content: "";
+                content: '';
                 display: block;
                 position: absolute;
                 top: 50%;
@@ -127,10 +126,10 @@
         position: relative;
         z-index: 20;
         color: $color-grey;
-        
+
         transition: all 0.2s;
         cursor: pointer;
-       
+
         &:nth-child(even) {
             margin-left: 0.3rem;
         }
@@ -155,12 +154,10 @@
     }
 
     &__icon-small {
-        
         font-size: 1.8rem;
-        
+
         margin-bottom: -0.3rem;
         z-index: 20;
-        
     }
 
     &__info-box {
@@ -170,9 +167,9 @@
         justify-content: space-around;
         align-items: center;
         border: 1px solid transparent;
-        
+
         transition: all 0.2s;
-        
+
         &:hover {
             border: 1px solid rgba($color-black, 0.5);
         }
@@ -182,5 +179,29 @@
         height: 100%;
         width: 20%;
         border-left: 4px solid $color-primary-light;
+        
+        
+    }
+
+    &__options-hover {
+        width: 100%;
+        height: 100%;
+        border: 1px solid transparent;
+        transition: border 0.2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover {
+            border: 1px solid rgba($color-black, 0.5);
+        }
+    }
+
+    &__options-label {
+        font-size: 1.5rem;
+        width: 50%;
+        line-height: 1.8rem;
+        text-align: center;
+        padding-left: 1.5rem;
     }
 }

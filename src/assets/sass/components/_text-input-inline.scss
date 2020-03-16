@@ -1,0 +1,66 @@
+.text-input-inline {
+    position: relative;
+
+    color: $color-grey;
+    margin-bottom: 1.6rem;
+
+    @include respond(tab-port) {
+        padding-top: 2.7rem;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.6rem;
+        font-weight: 400;
+
+        display: none;
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+
+    &__input {
+        padding: 0.5rem 1rem 0.5rem 6rem;
+        width: 30rem;
+        font: inherit;
+
+        background-color: rgba($color-grey-light, 0.5);
+        color: $color-grey;
+        border: 1px solid rgba(190, 190, 190, 0.5);
+        border-radius: 3px;
+        transition: border 0.1s;
+
+        font: inherit;
+        font-size: 1.8rem;
+
+        &::placeholder {
+            color: rgba($color-grey-medium, 0.6);
+        }
+
+        &:focus {
+            outline: none;
+            border: 1px solid rgba($color-primary, 0.7);
+        }
+    }
+
+    &__icon {
+        position: absolute;
+        left: 1.2rem;
+        bottom: -0.1rem;
+        font-size: 2.1rem;
+        color: $color-grey-medium-2;
+
+        &:after {
+            content: '';
+            display: block;
+            width: 1px;
+            background-color: rgba($color-grey-medium, 0.5);
+            height: 2.6rem;
+            display: inline-block;
+            margin-left: 1.2rem;
+            transform: translateY(0.2rem);
+        }
+    }
+}

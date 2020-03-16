@@ -14,16 +14,16 @@ const Home = () => {
     return (
         <main>
             <Header />
-			<SectionNumbers />
-			<SectionAbout />
-			<SectionRooms />
-			<SectionDiscover />
-			<SectionTransport />
-            <SectionReservations linkerColor={colors.primaryDarkSuper}/>
+            <SectionNumbers />
+            <SectionAbout />
+            <SectionRooms />
+            <SectionDiscover />
+            <SectionTransport />
+            <SectionReservations linkerColor={colors.primaryDarkSuper} />
             <SectionAwards />
             <SectionContact />
         </main>
-    )
-}
+    );
+};
 
 export default Home;

@@ -6,6 +6,7 @@
     //background-image: url(../img/reservations-bg.jpg);
     background-size: cover;
     background-position: top;
+    background-attachment: fixed;
     position: relative;
 
     &__content-wrapper {
@@ -15,7 +16,7 @@
         // width: 100%;
         // transform: translate(-50%, 0);
         margin: 0 auto;
-        padding-top: 18rem;
-        padding-bottom: 5rem;
+        padding-top: 8%;
+        padding-bottom: 10rem;
     }
 }

@@ -15,33 +15,33 @@ const SectionDiscover = () => {
         {
             title: 'SPA',
             img: spaImg,
-            link: '/spa',
+            link: '/spa'
         },
         {
             title: 'Restaurant',
             img: restaurantImg,
-            link: '/restaurant',
+            link: '/restaurant'
         },
         {
             title: 'Sport',
             img: sportImg,
-            link: '/sport',
+            link: '/sport'
         },
         {
             title: 'Busisness',
             img: businessImg,
-            link: '/business',
-        },
-    ]
+            link: '/business'
+        }
+    ];
 
     return (
         <Section name="section-discover" type="white">
             <Linker color={colors.primaryDarkMedium} />
             <SectionTitle>Discover Our Hotel</SectionTitle>
             {/* <h2 className="section-subtitle">Our hotel consist of many asdasdsadsadasd asdasd</h2> */}
-            <BoxLinks links={links}/>
+            <BoxLinks links={links} />
         </Section>
-    )
-}
+    );
+};
 
-export default SectionDiscover
+export default SectionDiscover;

@@ -46,6 +46,21 @@
 
 .section-about {
     height: 100%;
+
+    &__img-box {
+        height: 30rem;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 2px;
+        overflow: hidden;
+        box-shadow: 0 1rem 1.5rem rgba($color-black, 0.08);
+        background-image: $gradient-main;
+    }
+
+    &__img {
+        width: 100%;
+        opacity: 0.6;
+    }
 }
 
 .section-rooms {
