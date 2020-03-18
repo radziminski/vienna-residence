@@ -26,9 +26,10 @@ export class Reservations extends Component {
             earlyCheckIn: false,
             lateCheckOut: false,
             message: '',
-            
+            airportTransfer: false,
+            breakfests: false,
             spaEntrance: false,
-            premium: false
+            parking: false
         },
         personalData: {
             firstName: null,
@@ -38,9 +39,9 @@ export class Reservations extends Component {
             address: {
                 street: null,
                 city: null,
-                zip: null,
-            },
-            country: null,
+                country: null,
+                zip: null
+            }
         }
     };
 
@@ -140,6 +141,18 @@ export class Reservations extends Component {
         });
     };
 
+    onStepThreeFinishedHandler = formData => {
+        this.setState({
+            reservationStep: 4,
+            personalData: {
+                ...formData.personalData
+            },
+            features: {
+                ...formData.features
+            }
+        });
+    };
+
     nextStep = () => {
         let currentStep = this.state.reservationStep;
         currentStep++;
@@ -154,7 +167,8 @@ export class Reservations extends Component {
 
     stepChangedHandler = step => {
         if (this.state.reservationStep !== step) {
-            if (step === 2 && (!this.state.dates.checkInDate || !this.state.dates.checkOutDate)) return;
+            if (step === 2 && (!this.state.dates.checkInDate || !this.state.dates.checkOutDate))
+                return;
             this.setState({ reservationStep: step });
         }
     };
@@ -194,13 +208,13 @@ export class Reservations extends Component {
                 subTitle = 'Fill in your personal data and choose additional features:';
                 content = (
                     <div className={this.classNames.element('form-wrapper')}>
-                        <ReservationsFeaturesStep />
+                        <ReservationsFeaturesStep nextStep={this.onStepThreeFinishedHandler} />
                     </div>
                 );
                 break;
 
             case 4:
-                subTitle = 'Summary';
+                subTitle = 'Summary:';
                 break;
 
             default:

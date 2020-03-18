@@ -9,22 +9,31 @@ export class Checkbox extends Component {
     };
 
     onChange = e => {
-        // this.props.onChange(e);
+        this.props.onChange(!this.state.checked);
         this.setState({ checked: !this.state.checked });
-        console.log('changed')
+        console.log('changed');
     };
 
     render() {
         return (
-            <div className={this.classNames.block()}>
+            <div
+                className={
+                    this.props.type
+                        ? this.classNames.blockWithModifiers(this.props.type)
+                        : this.classNames.block()
+                }
+                onClick={this.onChange}
+            >
                 <input
                     type="checkbox"
                     id={this.props.name}
                     className={this.classNames.element('input')}
-                    onChange={this.onChange}
                     checked={this.state.checked}
+                    onChange={this.onChange}
+                    required={this.props.required === true}
                 />
-                <label htmlFor={this.props.name} className={this.classNames.element('label')}>{this.props.children}
+                <label htmlFor={this.props.name} className={this.classNames.element('label')}>
+                    {this.props.children}
                 </label>
                 <span className={this.classNames.element('checkmark')}></span>
             </div>

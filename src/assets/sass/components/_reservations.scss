@@ -8,7 +8,6 @@
     border: none;
     border-radius: 5px;
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
-    
 
     &__title {
         display: block;
@@ -29,7 +28,7 @@
     &__sub-title {
         color: $color-grey;
         font-weight: 400;
-        margin: 2rem auto 1rem auto;
+        margin: 3rem auto 1rem auto;
         text-align: center;
         font-size: 2rem;
     }
@@ -60,9 +59,9 @@
         &--active {
             color: $color-grey-dark;
             background-color: rgba($color-primary-light, 0.12);
-            
+
             &:after {
-                content: "";
+                content: '';
                 display: block;
                 position: absolute;
                 bottom: 0;
@@ -75,12 +74,11 @@
     }
 
     &__form-wrapper {
-        width:  95%;
+        width: 95%;
         max-width: 75rem;
         margin: 0 auto;
         padding-bottom: 2rem;
     }
-
 }
 
 .reservations-room-choice {

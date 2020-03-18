@@ -2,6 +2,7 @@
     display: block;
     padding: 2rem 1rem;
     font-size: 1.8rem;
+    width: 100%;
 
     &__btn {
         margin: 0 auto;
@@ -14,9 +15,8 @@
         display: inline-block;
         margin-bottom: 2rem;
         position: relative;
-        
     }
-    
+
     &__dates-wrapper {
         width: 100%;
         display: flex;
@@ -48,13 +48,13 @@
     }
 
     &__date-input {
-       padding: 0.5rem 1rem;
-       background-color: $color-grey-light;
-       border-radius: 5px;
-       width: 18rem; 
-       display: inline-block;
-       cursor: pointer;
-       position: relative;
+        padding: 0.5rem 1rem;
+        background-color: $color-grey-light;
+        border-radius: 5px;
+        width: 18rem;
+        display: inline-block;
+        cursor: pointer;
+        position: relative;
     }
 
     &__calendar {
@@ -96,13 +96,21 @@
     &__columns {
         display: flex;
         justify-content: space-between;
+
+        &--around {
+            justify-content: space-around;
+        }
     }
 
     &__column-title {
-        font-size: 2rem;
+        font-size: 1.9rem;
         font-weight: 500;
         color: $color-primary;
         margin-bottom: 1rem;
+
+        &--centered {
+            text-align: center;
+        }
     }
 
     &__features {
@@ -111,7 +119,7 @@
         position: relative;
 
         &:before {
-            content: "";
+            content: '';
             display: block;
             position: absolute;
             top: -2rem;
@@ -122,5 +130,4 @@
             background-color: $color-grey-medium-3;
         }
     }
-
 }

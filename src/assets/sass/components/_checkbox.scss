@@ -1,7 +1,7 @@
 .checkbox {
     display: block;
     position: relative;
-    padding-left: 5rem;
+    padding-left: 0;
     margin-bottom: 1rem;
     cursor: pointer;
     font-size: 1.8rem;
@@ -21,22 +21,21 @@
     /* Create a custom checkbox */
     &__checkmark {
         position: absolute;
-        top: 0.2rem;
+        top: 0.4rem;
         left: 0;
-        height: 22px;
-        width: 22px;
+        height: 20px;
+        width: 20px;
         border-radius: 50%;
-        border: 3px solid $color-primary;
+        border: 2px solid $color-primary;
         background-color: transparent;
-        
     }
 
     /* On mouse-over, add a grey background color */
     &:hover &__input ~ &__checkmark {
-       &:after {
-           opacity: 0.08;
-           transform: scale(4.2) translate(-12%, -12%);
-       }
+        &:after {
+            opacity: 0.07;
+            transform: scale(1) translate(-50%, -50%);
+        }
     }
 
     /* Show the checkmark when checked */
@@ -46,8 +45,9 @@
             transform: translate(-50%, -50%);
         }
 
-        &:before { 
+        &:before {
             opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
         }
     }
 
@@ -59,11 +59,11 @@
         opacity: 0;
         left: 50%;
         top: 50%;
-        width: 9px;
-        height: 9px;
+        width: 38px;
+        height: 38px;
         border-radius: 50%;
-        background-color: $color-primary;
-        transform: translate(-50%, -50%);
+        background-color: $color-primary-light;
+        transform: translate(-50%, -50%) scale(0);
         transition: all 0.15s;
     }
 
@@ -78,12 +78,27 @@
         height: 10px;
         border-radius: 50%;
         background-color: $color-primary;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(0);
         transition: all 0.15s;
     }
 
     &__label {
         font-weight: 300;
-        text-transform: lowercase;
+        //text-transform: lowercase;
+        padding-left: 4rem;
+        color: $color-primary-dark;
+        font-size: 1.7rem;
+    }
+
+    &--black &__checkmark {
+        border: 2px solid $color-grey;
+        &:after,
+        &:before {
+            background-color: $color-grey;
+        }
+    }
+
+    &--black &__label {
+        color: $color-grey;
     }
 }
