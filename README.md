@@ -4,6 +4,7 @@ Hotel website with fully functional reservations systems.
 ## App still under development
 Finished:
  - React Frontend
+ 
 To do:
  - NodeJS Backend
 
